@@ -7,5 +7,8 @@ class User < ApplicationRecord
   has_many :community
   has_many :evaluation
   belongs_to :user
-
+  validates :username, presence: true, uniqueness: true
+  validates :age, presence: true
+  validates :language, presence: true
+  validates :location, presence: true
 end
