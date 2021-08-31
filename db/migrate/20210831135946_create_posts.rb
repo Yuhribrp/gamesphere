@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration[6.0]
     create_table :posts do |t|
       t.string :photo
       t.string :video
-      t.string :content
+      t.text :content
       t.string :title
       t.integer :likes
 
