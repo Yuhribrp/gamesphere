@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_31_141849) do
+ActiveRecord::Schema.define(version: 2021_08_31_191249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,10 +26,8 @@ ActiveRecord::Schema.define(version: 2021_08_31_141849) do
 
   create_table "communities", force: :cascade do |t|
     t.string "title"
-    t.bigint "post_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["post_id"], name: "index_communities_on_post_id"
   end
 
   create_table "evaluations", force: :cascade do |t|
@@ -45,6 +43,16 @@ ActiveRecord::Schema.define(version: 2021_08_31_141849) do
     t.index ["user_id"], name: "index_evaluations_on_user_id"
   end
 
+  create_table "gametags", force: :cascade do |t|
+    t.string "game_title"
+    t.integer "raking"
+    t.string "skil_level"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_gametags_on_user_id"
+  end
+
   create_table "memberships", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "community_id", null: false
@@ -58,10 +66,11 @@ ActiveRecord::Schema.define(version: 2021_08_31_141849) do
     t.string "photo"
     t.string "video"
     t.text "content"
-    t.string "title"
-    t.integer "likes"
+    t.integer "like"
+    t.bigint "community_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["community_id"], name: "index_posts_on_community_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -82,8 +91,9 @@ ActiveRecord::Schema.define(version: 2021_08_31_141849) do
   end
 
   add_foreign_key "comments", "posts"
-  add_foreign_key "communities", "posts"
   add_foreign_key "evaluations", "users"
+  add_foreign_key "gametags", "users"
   add_foreign_key "memberships", "communities"
   add_foreign_key "memberships", "users"
+  add_foreign_key "posts", "communities"
 end

@@ -1,3 +1,4 @@
 class Community < ApplicationRecord
-  belongs_to :post
+  has_many :posts
+  has_many :users, through: :memberships
 end

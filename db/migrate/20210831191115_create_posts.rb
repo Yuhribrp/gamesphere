@@ -4,8 +4,8 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.string :photo
       t.string :video
       t.text :content
-      t.string :title
-      t.integer :likes
+      t.integer :like
+      t.references :community, null: false, foreign_key: true
 
       t.timestamps
     end
