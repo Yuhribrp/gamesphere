@@ -1,9 +1,21 @@
 <h1>Hello from index</h1>
 <% @posts.each do |post| %>
-
-<p><%= post.content %></p>
-
+  <% if post.photo %>
+    <%= image_tag(post.photo) %>
+    <p><%= post.content %></p>
+  <% elsif post.video %>
+    <%= video_tag(post.video) %>
+    <p><%= post.content %></p>
+  <% else %>
+    <p><%= post.content %></p>
+  <% end %>
 <% end %>
+
+<p><%= @post.like %></p>
+
+<%# <% if truevalue %>
+  <%# <%= post.like += 1 %>
+<%# <% end %>
 
 <%= simple_form_for [@community, @post] do |f| %>
   <%= f.input :content %>
