@@ -6,8 +6,9 @@ Rails.application.routes.draw do
     # resources :evaluations, only: [:index, :create]
     # resources :friendship, only: [:create]
     # end
-  resources :communities, only: [:index, :show] do
+  resources :communities, only: [:index, :show, :searches] do
     resources :posts, only: [:new, :create]
     resources :match, only: [:create]
+
   end
 end
