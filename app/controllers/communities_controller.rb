@@ -1,6 +1,6 @@
 class CommunitiesController < ApplicationController
 
-  def show
+  def index
     @communities = Community.all
   end
 end

@@ -12,15 +12,14 @@ puts "---------------Seeding Communities Started----------------"
 
 Community.delete_all
 
-lea_of_leg = Community.new(title: "League of Legends")
+lea_of_leg = Community.create!(title: "League of Legends")
 
 # Faker::Game.title
 
-communities = []
 
 25.times do
-  communities << Community.new(title: Faker::Game.title)
-  puts "seeded with -- #{communities.last.title}"
+  Community.create!(title: Faker::Game.title)
+  puts "seeded with -- #{Community.last.title}"
 end
 
 puts "------------- Seeding communities completed -------------------"
