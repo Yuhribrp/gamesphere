@@ -9,6 +9,8 @@
 
     <% @communities.each do |community| %>
 <p> <%= community.title %> </p>
+<p> <%= community.img_url %> </p>
+  <img src="<%= community.img_url %>">
     <% end %>
 
   </div>
