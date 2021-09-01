@@ -1,5 +1,15 @@
 
-<p> Hello from the Communities Index </p>
+<p> communities: </p>
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <div id="community">
+
     <% @communities.each do |community| %>
 <p> <%= community.title %> </p>
     <% end %>
+
+  </div>
+</div>
