@@ -1,0 +1,60 @@
+.about-icons { 
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20rem;
+  h3 {
+  color: #80FFDB;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  font-family: 'Prompt', sans-serif;
+}
+}
+.join-icon {
+  flex: 0 0 500px;
+  position: relative;
+  bottom: 8rem;
+}
+
+.match-icon {
+  flex: 0 0 500px;
+  position: relative;
+  top: 4rem;
+}
+
+.chat-icon {
+  flex: 0 0 500px;
+  position: relative;
+  bottom: 8rem;
+}
+
+.fa-gamepad{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 7rem;
+  padding: 1rem;
+  color: #9c71e0;
+  text-shadow: rgba(128, 255, 219, 0.4) -5px 5px, rgba(128, 255, 219, 0.3) -10px 10px, rgba(128, 255, 219, 0.2) -15px 15px, rgba(128, 255, 219, 0.1) -20px 20px, rgba(128, 255, 219, 0.05) -25px 25px;
+}
+
+.fa-user-friends {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 7rem;
+  padding: 2rem;
+  color: #9c71e0;
+  text-shadow:rgba(128, 255, 219, 0.4) 0px 5px, rgba(128, 255, 219, 0.3) 0px 10px, rgba(128, 255, 219, 0.2) 0px 15px, rgba(128, 255, 219, 0.1) 0px 20px, rgba(128, 255, 219, 0.05) 0px 25px;
+}
+
+.fa-network-wired {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 7rem;
+  padding: 2rem;
+  color: #9c71e0;
+  text-shadow: rgba(128, 255, 219, 0.4) 5px 5px, rgba(128, 255, 219, 0.3) 10px 10px, rgba(128, 255, 219, 0.2) 15px 15px, rgba(128, 255, 219, 0.1) 20px 20px, rgba(128, 255, 219, 0.05) 25px 25px;
+}

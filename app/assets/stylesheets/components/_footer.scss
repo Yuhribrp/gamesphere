@@ -1,0 +1,148 @@
+footer {
+  width: 100%;
+  // position: relative;
+  // bottom: -10px;
+  background: linear-gradient(to right, #6c1485, #11326e98);
+  color: #d6befd;
+  padding: 20px 0 30px;
+  border-top-left-radius: 125px;
+  border: 1px solid rgba(215, 166, 243, 0.3);
+  font-size: 16px;
+  line-height: 10px;
+  font-family: 'Prompt', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.07rem;
+}
+
+.row {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.col:nth-child(2), .col:nth-child(3) {
+  flex-basis: 15%;
+}
+
+.col h3 {
+  width: fit-content;
+  margin-bottom: 30px;
+  position: relative;
+  font-size: 19px;
+}
+
+.company-email {
+  width: fit-content;
+  margin: 20px 0;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 12px;
+  position: relative;
+  right: 40px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+form {
+  padding-bottom: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+form.far {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+  padding: 6px;
+}
+
+form button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+form button .far {
+  font-size: 20px;
+  color: #d6befd;
+}
+
+.social-midia .fab {
+  width: 50px;
+  height: 40px;
+  // border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 40px;
+  color: #80FFDB;
+  text-shadow: 1.5px 1.5px 3px black;
+  // background: transparent;
+  margin-right: 15px;
+  cursor: pointer;
+  // box-shadow: 1.5px 1.5px 3px black;
+}
+
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+
+.underline span {
+  width: 15px;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
