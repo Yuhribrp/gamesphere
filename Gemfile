@@ -61,4 +61,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# communities-index
 gem 'faker'
+gem 'pg_search', '~> 2.3.0'
+
