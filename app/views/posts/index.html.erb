@@ -1,0 +1,13 @@
+<h1>Hello from index</h1>
+<% @posts.each do |post| %>
+
+<p><%= post.content %></p>
+
+<% end %>
+
+<%= simple_form_for [@community, @post] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :photo %>
+  <%= f.input :video %>
+  <%= f.submit %>
+<% end %>
