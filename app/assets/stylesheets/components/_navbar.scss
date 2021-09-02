@@ -10,3 +10,40 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-home {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+  .navbar-wagon-link {
+    color: white;
+    font-weight: bold;
+  }
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 25px;
+  animation: flicker 2s infinite alternate;
+  color: rgb(252, 252, 252);
+  font-family: 'Prompt', sans-serif;
+}  
+
+@keyframes flicker {
+  
+0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+    text-shadow:
+    0 0 4px rgb(240, 201, 255),
+    0 0 11px rgb(240, 201, 255),
+    0 0 19px rgb(240, 201, 255),
+    0 0 40px #7821b3,
+    0 0 80px #7821b3,
+    0 0 90px #7821b3,
+    0 0 100px #7821b3,
+    0 0 150px #7821b3;
+}
+20%, 24%, 55% {        
+    text-shadow: none;
+}
+}

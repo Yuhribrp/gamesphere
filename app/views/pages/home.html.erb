@@ -1,2 +1,130 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+  <div class="bg-image">
+    <% content_for(:navbar_class, "navbar-home") %>
+    <div class="banner">
+      <div class="container">
+        <h1>GameSphere</h1>
+        <p>The World's Biggest Gamers Community </p>
+      </div>
+    </div>
+    <div class="button">
+      <%= link_to "Let's Roll", communities_path, class: "sphere-btn" %>
+    </div>
+    <div class="about-icons">
+      <div class="join-icon">
+      <i class="fas fa-gamepad"></i><h3>Join a community of players that can improve your game experience.<h3>
+      </div>
+      <div class="match-icon">
+      <i class="fas fa-user-friends"></i><h3>Match with players that have the same ranks and levels as you do!</h3>
+      </div>
+      <div class="chat-icon">
+      <i class="fas fa-network-wired"></i><h3>Chat, find players and become active in your favorite game communities.</h3>
+      </div>
+    </div>    
+    <div class="cards-container">
+      <div class="cards">
+        <div class="card-lol">
+          <h3> League of Legends </h3>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            JOIN
+          </a>
+        </div>
+
+        <div class="card-dota">
+          <h3> Dota 2 </h3>
+                    <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            JOIN
+          </a>
+        </div>
+
+        <div class="card-fortnite">
+          <h3> Fortnite </h3>
+                    <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            JOIN
+          </a>
+        </div>
+
+        <div class="card-valorant">
+          <h3> Valorant </h3>
+                    <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            JOIN
+          </a>
+        </div>
+
+        <div class="card-gta">
+          <h3> Grand Theft Auto V </h3>
+                    <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            JOIN
+          </a>
+        </div>
+
+        <div class="card-wow">
+          <h3> World of Warcraft </h3>
+                    <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            JOIN
+          </a>
+        </div>
+      
+      </div>
+    </div>
+
+    <div style="margin: 50px;"></div>
+
+    <footer>
+      <div class="row">
+        <div class="col"">
+          <p>LOGO</p>
+        </div>
+
+        <div class="col">
+          <h3>Office <div class="underline"><span></span></div></h3>
+          <p>Rio de Janeiro, Rj.</p>
+          <p>Brasil</p>
+          <p class="company-email">gamersphere@support.com</p>
+        </div>
+        
+        <div class="col">
+          <h3>Links <div class="underline"><span></span></div></h3>
+          <ul>
+            <li><a href="#"></a>Who are we</a></li>
+            <li><a href="#"></a>Services</a></li>
+            <li><a href="#"></a>Features</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h3>Newsletter <div class="underline"><span></span></div></h3>
+          <form>
+            <i class="far fa-envelope"></i>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit"><i class="far fa-arrow-alt-circle-right"></i></button>
+          </form>
+          <div class="social-midia">
+          <i href ="#" class="fab fa-fw fa-youtube"></i>
+          <i href ="#" class="fab fa-twitter"></i>
+          <i href ="#" class="fab fa-linkedin"></i>
+          <i href ="#" class="fab fa-whatsapp"></i>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <p class="copyright">GamerSphere Company © - All Rights Reserved</p>
+    </footer>
+  </div>
