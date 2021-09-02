@@ -9,7 +9,7 @@
 require 'cgi'
 
 # communities
-puts "---------------Seeding Communities Started---------------
+puts "---------------Seeding Communities Started---------------"
 
 
 # Community.delete_all
