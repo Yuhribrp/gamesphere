@@ -23,7 +23,7 @@ lea_of_leg = Community.create!(title: "League of Legends")
   puts "seeded with -- #{Community.last.title}"
   uri = CGI.escape(Community.last.title)
   # Community.last.img_url="https://loremflickr.com/320/240/#{uri}"
-  Community.update((Community.last.id), img_url: "https://loremflickr.com/320/240/#{uri}")
+  Community.update(Community.last.id, img_url: "https://loremflickr.com/320/240/#{uri}")
   puts "cs::uri=#{uri}"
   puts "cs::img_url=#{Community.last.img_url}"
 end
@@ -60,7 +60,12 @@ players = []
     location: Faker::Nation.capital_city,
     age: rand(1..135)
   )
-  player_one.save!
+  #gravatar_image_tag('spam@spam.com'.gsub('spam', 'mdeering'), :alt => 'Michael Deering')
+  #gravatar_image_tag('spam@spam.com'.gsub('spam', "#{players.last.username}"), :alt => "#{players.last.username}")
+
+  #User.update(User.last.id, Gravatar.new(players.last.email).image_url)
+  User.update(User.last.id, Gravatar.new(players.last.email).image_url)
+  # players.save!
   puts "...added #{players.last.username}, #{players.last.full_name}"
 end
 puts "------------- Seeding users completed -------------------"
