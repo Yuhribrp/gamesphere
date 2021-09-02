@@ -1,0 +1,67 @@
+.banner {
+  display: flex;
+  justify-content: space-around;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Prompt', sans-serif;
+  background-image: url("mainbanner5.jpg");
+  opacity: .9;
+  padding: 450px;
+  margin-top: 5px;
+  margin: 0, auto;
+  border-radius: 500px;
+  box-shadow: 5px 5px 10px #692e7a;
+  border-style: hidden;
+  border: 1px solid rgba(215, 166, 243, 0.6);
+  height: 250px; 
+  -webkit-mask-image: linear-gradient(to top, transparent 2%, black 45%);
+  mask-image: linear-gradient(to top, transparent 2%, black 45%);
+
+  p {
+    display: flex;
+    justify-content: space-around;
+    background-position: center;
+    color: white;
+    /* opacity: .95; */
+    font-weight: bolder;
+    text-shadow: 2px 2px 1.5px black;
+    font-size: 35px;
+    margin: 20;
+    padding: -200px;
+    line-height: 3.0;
+    position: relative;
+    bottom: 60px;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  h1 {
+    font-size: 120px;
+    text-align: center;
+    font-weight: bolder;
+    margin: 0, auto;
+    position: relative;
+    bottom: 50px;
+    animation: flicker 2s infinite alternate;
+    color: rgb(252, 252, 252);
+    font-family: 'Prompt', sans-serif;
+  }  
+}
+
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px rgb(240, 201, 255),
+      0 0 11px rgb(240, 201, 255),
+      0 0 19px rgb(240, 201, 255),
+      0 0 40px #7821b3,
+      0 0 80px #7821b3,
+      0 0 90px #7821b3,
+      0 0 100px #7821b3,
+      0 0 150px #7821b3;
+  }
+  20%, 24%, 55% {        
+      text-shadow: none;
+  } 
+}
