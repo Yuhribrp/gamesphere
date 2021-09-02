@@ -1,0 +1,20 @@
+.main-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  flex: 0 0 200px;
+}
+
+.stuffs {
+  flex: 0 0 400px;
+}
+
+.post-msg {
+  flex-grow: 1;
+}
+
+.post-form {
+align-items: center;
+}

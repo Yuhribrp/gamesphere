@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
     @community = Community.find(params[:community_id])
     @post = Post.new
   end

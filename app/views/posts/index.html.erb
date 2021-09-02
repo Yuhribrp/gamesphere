@@ -1,24 +1,69 @@
-<h1><%= @community.title %></h1>
-<% @posts.each do |post| %>
-  <% if post.photo %>
-    <%= image_tag(post.photo) %>
-    <p><%= post.content %></p>
-  <% elsif post.video %>
-    <%= video_tag(post.video) %>
-    <p><%= post.content %></p>
-  <% else %>
-    <p><%= post.content %></p>
+  <h1><%= @community.title %></h1>
+<% if current_user =! nil %>
+  <div class="d-flex justify-content-around">
+    <div class="post-form">
+      <%= simple_form_for [@community, @post] do |f| %>
+        <%= f.input :content %>
+        <%= f.input :photo %>
+        <%= f.input :video %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
   <% end %>
-  <hr>
-<% end %>
+
+<div class="main-page">
+
+  <div class="sidebar">
+    <ul>
+      <li><i class="fas fa-headset"></i>Friend List</li>
+      <li><i class="fas fa-headset"></i>Communities</li>
+      <li><i class="fas fa-headset"></i>My Matches</li>
+    </ul>
+  </div>
+
+  <div class="post-msg">
+
+    <% @posts.each do |post| %>
+      <% if post.photo %>
+        <%= image_tag(post.photo) %>
+        <p><%= post.content %></p>
+      <% elsif post.video %>
+        <%= video_tag(post.video) %>
+        <p><%= post.content %></p>
+      <% else %>
+        <p><%= post.content %></p>
+      <% end %>
+      <%# <%= current_user.username %> %>
+      <%= Time.now %>
+      <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" alt="avatar">
+    <hr>
+    <% end %>
+
+    <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" alt="avatar">
+    <h2>Good morning, people! Guided link to my game play.. <span>12pm</span></h2>
+    <p>Mario é o melhor jogo the todos os tempos!!!! 😍</p>
+
+    <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" alt="avatar">
+    <h2>Good morning, people! Guided link to my game play.. <span>12pm</span></h2>
+    <p>Mario é o melhor jogo the todos os tempos!!!! 😍</p>
+  </div>
+
+  <div class="stuffs">
+    <div class="stuf">
+      <i class="fas fa-headset"></i>players
+    </div>
+
+    <div class="stuf">
+      <i class="fas fa-headset"></i>players
+    </div>
+  </div>
+</div>
+
+
+
+
 
 <%# <% if truevalue %>
   <%# <%= post.like += 1 %>
 <%# <% end %>
-
-<%= simple_form_for [@community, @post] do |f| %>
-  <%= f.input :content %>
-  <%= f.input :photo %>
-  <%= f.input :video %>
-  <%= f.submit %>
-<% end %>
