@@ -1,4 +1,4 @@
-<h1>Hello from index</h1>
+<h1><%= @community.title %></h1>
 <% @posts.each do |post| %>
   <% if post.photo %>
     <%= image_tag(post.photo) %>
@@ -9,9 +9,8 @@
   <% else %>
     <p><%= post.content %></p>
   <% end %>
+  <hr>
 <% end %>
-
-<p><%= @post.like %></p>
 
 <%# <% if truevalue %>
   <%# <%= post.like += 1 %>
