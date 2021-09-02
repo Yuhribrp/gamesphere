@@ -9,7 +9,7 @@
 require 'cgi'
 
 # communities
-puts "---------------Seeding Communities Started---------------
+puts "---------------Seeding Communities Started---------------"
 
 
 # Community.delete_all
@@ -69,4 +69,3 @@ puts "------------- Seeding users completed -------------------"
 puts "------------- Seeding posts -------------------"
 Post.create!(photo: "https://img.ibxk.com.br/2015/06/15/15150935995121.jpg?w=1120&h=420&mode=crop&scale=both", content: "Sou bicho brabo do Mario", like: 3, community_id: lea_of_leg.id)
 puts "------------- Seeding posts completed -------------------"
-
