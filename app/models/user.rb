@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :communities, through: :memberships
   has_many :evaluations
   has_many :gametags
-  belongs_to :user
+  # belongs_to :user
   validates :username, presence: true, uniqueness: true
   validates :age, presence: true
   validates :language, presence: true
