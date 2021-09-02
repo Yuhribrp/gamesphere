@@ -44,6 +44,22 @@ player_one = User.new(
 )
 # player_one.skip_before_action!
 player_one.save!
+
+players = []
+
+25.times do
+  players << User.new(
+    email: Faker::Internet.email,
+    password: Faker::Alphanumeric.alphanumeric(number: 10),
+    username: "#{Faker::Hacker.verb}_#{Faker::Hacker.noun}",
+    full_name: Faker::Name.unique.name,
+    language: Faker::Nation.language,
+    location: Faker::Nation.capital_city,
+    age: rand(1..135)
+  )
+  player_one.save!
+  puts "...added #{players.last.username}, #{players.last.full_name}"
+end
 puts "------------- Seeding users completed -------------------"
 
 
