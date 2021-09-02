@@ -1,6 +1,21 @@
+.community-h1 {
+    font-size: 120px;
+    text-align: center;
+    font-weight: bolder;
+    margin: 0, auto;
+    position: relative;
+    bottom: 50px;
+    animation: flicker 2s infinite alternate;
+    color: rgb(252, 252, 252);
+    font-family: 'Prompt', sans-serif;
+    color: #64DFDF;
+    padding: 150px;
+}
+
 .main-page {
   display: flex;
   justify-content: space-between;
+  color: azure;
 }
 
 .sidebar {
@@ -13,8 +28,22 @@
 
 .post-msg {
   flex-grow: 1;
+  width: 200px;
+  height: auto;
+
+}
+
+.post-img {
+  width: 80%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .post-form {
 align-items: center;
+}
+
+.post-time {
+  text-decoration: muted;
 }
