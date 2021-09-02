@@ -2,7 +2,6 @@ class CommunitiesController < ApplicationController
   # skip_before_action :authenticate_user!, only: [ :home ]
 
   def index
-    
     # @search = params["search"]
     # if @search.present?
     #   @title = @search["title"]
