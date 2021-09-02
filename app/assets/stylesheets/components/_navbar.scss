@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: linear-gradient(to right, #391144, #381c7998);
+  opacity: 0.95;
+  height: 4rem;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -23,7 +25,7 @@
 }
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.5);
-  font-size: 25px;
+  font-size: 23px;
   animation: flicker 2s infinite alternate;
   color: rgb(252, 252, 252);
   font-family: 'Prompt', sans-serif;
