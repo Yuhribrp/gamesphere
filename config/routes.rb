@@ -11,4 +11,5 @@ Rails.application.routes.draw do
     resources :posts, only: [:index, :new, :create]
     resources :match, only: [:create]
   end
+  get '/profile/:id', to: 'pages#profile', as: 'profile'
 end
