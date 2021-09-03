@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: linear-gradient(to right, #391144, #381c7998);
+  background: linear-gradient(to bottom, #391144 40%, #381c7998);
   opacity: 0.95;
   height: 4rem;
 }
@@ -13,6 +13,12 @@
   width: 40px;
 }
 
+.avatar {
+  position: relative;
+  top:7px;
+  left:30px;
+  width: 3.5rem;
+}
 .navbar-home {
   position: absolute;
   width: 100%;
@@ -29,6 +35,9 @@
   animation: flicker 2s infinite alternate;
   color: rgb(252, 252, 252);
   font-family: 'Prompt', sans-serif;
+  position: relative;
+  top:11px;
+  left:15px;
 }  
 
 @keyframes flicker {
