@@ -79,30 +79,32 @@
             </div>
           </div>
 
+
       <div class="row gutters-sm">
         <div class="col-sm-6 mb-3">
           <div class="card-user-attributes h-100">
             <div class="card-user-profile-body">
               <h5 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Player Status</i></h5>
-              <h6>Communicability</h6>
-              <div class="progress mb-3" style="height: 6px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              <small>Communicability</small>
+              <div class="progress mb-3" style="height: 5px">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.communicability * 2 * 10 %>%" aria-valuenow="<%= @evaluation.communicability * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-              <h6>Tilt Resistance</h6>
-              <div class="progress mb-3" style="height: 6px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+              <small>Tilt Resistance</small>
+              <div class="progress mb-3" style="height: 5px">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.tilt_resistance * 2 * 10 %>%" aria-valuenow="<%= @evaluation.tilt_resistance * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-              <h6>Manners</h6>
-              <div class="progress mb-3" style="height: 6px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+              <small>Manners</small>
+              <div class="progress mb-3" style="height: 5px">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.manners * 2 * 10 %>%" aria-valuenow="<%= @evaluation.manners * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-              <h6>Sociability</h6>
-              <div class="progress mb-3" style="height: 6px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              <small>Sociability</small>
+              <div class="progress mb-3" style="height: 5px">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.sociability * 2 * 10 %>%" aria-valuenow="<%= @evaluation.sociability * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-              <h6>leadership</h6>
-              <div class="progress mb-3" style="height: 6px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+              <small>leadership</small>
+              <div class="progress mb-3" style="height: 5px">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.leadership * 2 * 10 %>%" aria-valuenow="<%= @evaluation.leadership * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
+
               </div>
             </div>
           </div>
@@ -122,7 +124,7 @@
           <p>Brasil</p>
           <p class="company-email">gamersphere@support.com</p>
         </div>
-        
+
         <div class="col">
           <h3>Links <div class="underline"><span></span></div></h3>
           <ul>
@@ -149,6 +151,5 @@
       </div>
       <hr>
       <p class="copyright">GamerSphere Company © - All Rights Reserved</p>
-    </footer> 
+    </footer>
 </div>
-
