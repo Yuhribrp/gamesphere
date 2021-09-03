@@ -16,7 +16,7 @@
 }
 
 .card-user-profile {
-  padding: 3rem;
+  padding: 2.5rem;
   position: relative;
   margin-top: 1rem;
   margin-left: 1rem;
@@ -27,9 +27,17 @@
   background-color: #fff;
   background-clip: border-box;
   border-radius: 50%;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.07);
   border: 3px solid #9ecaed;
   box-shadow: 0 0 10px #9ecaed;
+  font-family: 'Prompt', sans-serif;
+
+  h3 {
+    font-size: bolder;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+  }
 }
 
 .card-user-info {
@@ -40,11 +48,12 @@
   background-color: #fff;
   background-clip: border-box;
   border-radius: 50%;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.07);
   border: 3px solid #64dfcf;
   box-shadow: 0 0 10px #64dfcf;
   display:flex;
   place-items: center;
+  font-family: 'Prompt', sans-serif;
 }
 
 .card-user-attributes {
@@ -57,9 +66,10 @@
   background-color: #fff;
   background-clip: border-box;
   border-radius: 50%;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.07);
   border: 3px solid #f68de0;
   box-shadow: 0 0 10px #f68de0;
+  font-family: 'Prompt', sans-serif;
 }
 
 .card-user-profile-body {
@@ -107,14 +117,20 @@
 .btn-outline-primary {
   position: relative;
   bottom: 1rem;
-  margin: 10px;
+  margin: 12px;
   border-radius: .85rem;
+  color:white;
+  background-color: #64DFDF;
+  box-shadow: 0 0 5px #64DFDF,
+  0 0 10px #64DFDF,
+  0 0 20px #64DFDF,
+  0 0 40px #64DFDF;
 }
 
 .btn-outline-primary:hover {
-  position: relative;
-  bottom: 1rem;
-  margin: 10px;
+  // position: relative;
+  // bottom: 1rem;
+  // margin: 10px;
   border-radius: .85rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
