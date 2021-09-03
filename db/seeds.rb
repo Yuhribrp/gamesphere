@@ -11,9 +11,9 @@ require 'cgi'
 # communities
 puts "---------------Seeding Communities Started---------------"
 
-
-# Community.delete_all
-# User.delete_all
+Post.delete_all
+Community.delete_all
+User.delete_all
 
 lea_of_leg = Community.create!(title: "League of Legends")
 
@@ -49,6 +49,7 @@ player_one = User.new(
 player_one.save!
 
 players = []
+evaluations = []
 
 25.times do
   players << User.new(
@@ -62,6 +63,27 @@ players = []
   )
   player_one.save!
   puts "...added #{players.last.username}, #{players.last.full_name}"
+
+
+  rand(3..10).times do
+    puts "-----seeding evals------"
+    evaluations << Evaluation.new(
+      communicability: rand(1..5),
+      tilt_resistance: rand(1..5),
+      manners: rand(1..5),
+      sociability: rand(1..5),
+      leadership: rand(1..5),
+      hotness: rand(1..5),
+      user_id: players.last.id
+    )
+    puts "player: #{players.last.username} has:
+      c: #{evaluations.last.communicability}
+      tr: #{evaluations.last.tilt_resistance}
+      m: #{evaluations.last.manners}
+      s: #{evaluations.last.sociability}
+      l: #{evaluations.last.leadership}
+      ht: #{evaluations.last.hotness} "
+  end
 end
 puts "------------- Seeding users completed -------------------"
 
