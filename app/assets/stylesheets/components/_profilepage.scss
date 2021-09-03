@@ -1,8 +1,8 @@
 .profile-bg {
-  background-image: url('profilebg.jpeg');
+  background-image: image-url('profilebg.jpeg');
   background-position: cover;
   background-size: 2000px;
-  height: 1395px;
+  height: 1380px;
 }
 
 .main-body {
@@ -83,8 +83,8 @@
   background-clip: border-box;
   border-radius: 50%;
   background-color: rgba(255,255,255,0.07);
-  border: 3px solid #f68de0;
-  box-shadow: 0 0 10px #f68de0;
+  border: 3px solid #cdff93;
+  box-shadow: 0 0 10px #cdff93;
   font-family: 'Prompt', sans-serif;
 }
 
@@ -95,7 +95,7 @@
   border-radius: .85rem;
   vertical-align: center;
 
-  h6 {
+  small {
     color: white;
     font-weight: bold;
     text-shadow: 0 0 10px whitesmoke;
@@ -108,15 +108,15 @@
   left:3rem;
   bottom: 1rem;
   vertical-align: center;
-  color: #ffaaed !important;
+  color: #cdff93 !important;
   font-weight: bolder;
   letter-spacing: 0.2rem;
-  text-shadow: 0 0 10px #ffaaed;
+  text-shadow: 0 0 10px #cdff93;
   font-size: 1.4rem;
 }
 
 .progress-bar {
-  background-color:#ffaaed !important;
+  background-color:#cdff93 !important;
 }
 .card-user-profile-info {
   flex: 1 1 auto;
