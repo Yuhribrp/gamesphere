@@ -1,0 +1,235 @@
+.cmt-cards-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.communities-info {
+  // HAVE TO DISCOVER IF ITS NOT AFFECTING THE HOME PAGE TITLE
+  h2 {
+    font-size: 60px;
+    text-align: center;
+    font-weight: bolder;
+    margin: 0, auto;
+
+    animation: flicker 2s infinite alternate;
+    color: rgb(252, 252, 252);
+    font-family: 'Prompt', sans-serif;
+  }  
+}
+
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 1px rgb(240, 201, 255),
+      0 0 2px rgb(240, 201, 255),
+      0 0 5px rgb(240, 201, 255),
+      0 0 10px #7821b3,
+      0 0 20px #7821b3,
+      0 0 30px #7821b3,
+      0 0 250px #7821b3,
+      0 0 50px #7821b3;
+  }
+  20%, 24%, 55% {        
+      text-shadow: none;
+  } 
+}
+.cmt-cards {
+  margin-bottom: 20px;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 24px;
+
+  h3{
+    font-family: monospace;
+    font-size: 35px;
+    font-weight: bolder;
+    color: white;
+    position: relative;
+    top: 105px;
+    right: 10px;
+    text-shadow: 2px 2px 3px black;
+    opacity: .95;
+    display: flex;
+    text-align: left;
+  }
+
+  h4 {
+    font-family: monospace;
+    font-size: 35px;
+    font-weight: bolder;
+    color: white;
+    position: relative;
+    top: 255px;
+    left: 70px;
+    text-shadow: 2px 2px 3px black;
+    opacity: .95;
+    display: flex;
+    text-align: left;
+  }
+
+  a{
+    position: relative;
+    top: 92px;
+    left: 23px;
+    padding: 20px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    overflow: hidden;
+    font-family: 'Cyber', sans-serif;
+    border-radius: 8px;
+    font-weight: bolder;
+    text-shadow: 5px, 5px, 10px black;
+    font-size: 20px;
+  }
+
+}
+
+
+.cmt-image-seed {
+  width: 500px;
+  height: 250px;
+  border-radius: 8px;
+  text-align: center;
+  
+  border: 2px solid rgb(66, 66, 66);
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 30px;
+  // background-image: url("mf.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow:
+  0 0 2px rgb(240, 201, 255),
+  0 0 6px rgb(240, 201, 255),
+  0 0 10px rgb(240, 201, 255),
+  0 0 20px #7821b3,
+  0 0 30px #7821b3,
+  0 0 35px #7821b3,
+  0 0 40px #7821b3,
+  0 0 60px #7821b3;
+
+  a:hover{
+    background: #14a6ad;
+    color: #050801;
+    box-shadow: 0 0 5px #14a6ad,
+                0 0 25px #14a6ad,
+                0 0 50px #14a6ad,
+                0 0 200px #14a6ad;
+     /* -webkit-box-reflect:below 1px linear-gradient(transparent, #0005); */
+  }
+  a:nth-child(1){
+    filter: hue-rotate(270deg);
+  }
+  a:nth-child(2){
+    filter: hue-rotate(110deg);
+  }
+  a span{
+    position: absolute;
+    display: block;
+  }
+  a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg,transparent,#14a6ad);
+    animation: animate1 1s linear infinite;
+    
+  }
+  @keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+  }
+  a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#14a6ad);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+  }
+  @keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+  }
+  a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(270deg,transparent,#14a6ad);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+  }
+  @keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+  }
+  
+  
+  a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#14a6ad);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  @keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+  }
+}
+
+.search-cmt {
+  display: flex;
+  justify-content: space-around;
+
+  .form-control {
+    width: 30rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .btn-flat {
+    position: relative;
+    bottom: 5.4rem;
+    left: 24rem;
+  }
+}
+
+.communities-info {
+  text-align: center;
+  margin-top: 2rem;
+}
