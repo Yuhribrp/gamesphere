@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :communities, only: [:index, :show, :searches] do
     resources :posts, only: [:index, :new, :create]
-    resources :match, only: [:create]
+    resources :matches, only: [:index, :create]
   end
   get '/profile/:id', to: 'pages#profile', as: 'profile'
 end
