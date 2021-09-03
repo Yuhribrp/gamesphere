@@ -11,9 +11,9 @@ require 'cgi'
 # communities
 puts "---------------Seeding Communities Started---------------"
 
-
-# Community.delete_all
-# User.delete_all
+Post.delete_all
+Community.delete_all
+User.delete_all
 
 lea_of_leg = Community.create!(title: "League of Legends")
 
