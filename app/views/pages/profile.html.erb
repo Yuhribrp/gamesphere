@@ -8,10 +8,10 @@
               <div class="d-flex flex-column align-items-center text-center">
                 <img src="https://kitt.lewagon.com/placeholder/users/arthur-littm" alt="Admin" class="rounded-circle" width="150">
                 <div class="mt-3">
-                  <%= @user.username %>
+                  <h3><%= @user.username %><h3>
                   <h5 class="mb-1 font-size-md p-2"></h5>
                   <%= link_to "Find a Community", communities_path, class: "btn btn-outline-primary" %>
-                  <%= link_to "Find a Community", communities_path, class: "btn btn-outline-primary" %>
+                  <%= link_to "All My Friends", "#", class: "btn btn-outline-primary" %>
                 </div>
               </div>
             </div>
@@ -42,31 +42,31 @@
             <div class="card-user-profile-info">
               <div class="row">
                 <div class="col-sm-3">
-                  <h5 class="mb-0">Full Name</h5>
+                  <h5 class="mb-0">Name :</h5>
                 </div>
-                <div class="col-sm-9 text-secondary">
+                <div class="col-sm-9 text-primary">
                   <%= @user.username %>
                 </div>
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
-                  <h5 class="mb-0">Email</h5>
+                  <h5 class="mb-0">Email :</h5>
                 </div>
-                <div class="col-sm-9 text-secondary">
+                <div class="col-sm-9 text-primary">
                   <%= @user.email %>
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-9 text-secondary">
+                <div class="col-sm-9 text-primary">
                 </div>
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-3">
-                  <h5 class="mb-0">Location</h5>
+                  <h5 class="mb-0">Location :</h5>
                 </div>
-                <div class="col-sm-9 text-secondary">
+                <div class="col-sm-9 text-primary">
                   <%= @user.location%>
                 </div>
               </div>
@@ -79,6 +79,7 @@
             </div>
           </div>
 
+
       <div class="row gutters-sm">
         <div class="col-sm-6 mb-3">
           <div class="card-user-attributes h-100">
@@ -86,23 +87,24 @@
               <h5 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Player Status</i></h5>
               <small>Communicability</small>
               <div class="progress mb-3" style="height: 5px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.communicability * 2 * 10 %>%" aria-valuenow="<%= @evaluation.communicability * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <small>Tilt Resistance</small>
               <div class="progress mb-3" style="height: 5px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.tilt_resistance * 2 * 10 %>%" aria-valuenow="<%= @evaluation.tilt_resistance * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <small>Manners</small>
               <div class="progress mb-3" style="height: 5px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.manners * 2 * 10 %>%" aria-valuenow="<%= @evaluation.manners * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <small>Sociability</small>
               <div class="progress mb-3" style="height: 5px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.sociability * 2 * 10 %>%" aria-valuenow="<%= @evaluation.sociability * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <small>leadership</small>
               <div class="progress mb-3" style="height: 5px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.leadership * 2 * 10 %>%" aria-valuenow="<%= @evaluation.leadership * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
+
               </div>
             </div>
           </div>
@@ -122,7 +124,7 @@
           <p>Brasil</p>
           <p class="company-email">gamersphere@support.com</p>
         </div>
-        
+
         <div class="col">
           <h3>Links <div class="underline"><span></span></div></h3>
           <ul>
@@ -149,6 +151,5 @@
       </div>
       <hr>
       <p class="copyright">GamerSphere Company © - All Rights Reserved</p>
-    </footer> 
+    </footer>
 </div>
-
