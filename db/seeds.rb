@@ -11,11 +11,39 @@ require 'cgi'
 # communities
 puts "---------------Seeding Communities Started---------------"
 
+Post.delete_all
+Community.delete_all
+User.delete_all
 
-# Community.delete_all
-# User.delete_all
-
-lea_of_leg = Community.create!(title: "League of Legends")
+# homepage groups
+league_of_legends = Community.create!(
+  title: "League of Legends",
+  img_url: "http://localhost:3000/assets/mf.jpg"
+)
+dota_2 = Community.create!(
+  title: "DOTA 2",
+  img_url:"http://localhost:3000/assets/ember.jpg"
+)
+fortnite = Community.create!(
+  title: "Fortnite",
+  img_url: "http://localhost:3000/assets/fortnite3.jpg"
+)
+valorant = Community.create!(
+  title: "Valorant",
+  img_url: "http://localhost:3000/assets/valorant.jpg"
+)
+gta_v = Community.create!(
+  title: "Grand Theft Auto V",
+  img_url: "http://localhost:3000/assets/GTA.jpg"
+)
+wow = Community.create!(
+  title: "World of Warcraft",
+  img_url: "http://localhost:3000/assets/wow4.jpg"
+)
+mario = Community.create!(
+  title: "Super Mario Bros 3",
+  img_url: "https://img.ibxk.com.br/2015/06/15/15150935995121.jpg?w=1120&h=420&mode=crop&scale=both"
+)
 
 # Faker::Game.title
 25.times do
@@ -49,6 +77,7 @@ player_one = User.new(
 player_one.save!
 
 players = []
+evaluations = []
 
 25.times do
   players << User.new(
@@ -62,10 +91,31 @@ players = []
   )
   player_one.save!
   puts "...added #{players.last.username}, #{players.last.full_name}"
+
+
+  rand(3..10).times do
+    puts "-----seeding evals------"
+    evaluations << Evaluation.new(
+      communicability: rand(1..5),
+      tilt_resistance: rand(1..5),
+      manners: rand(1..5),
+      sociability: rand(1..5),
+      leadership: rand(1..5),
+      hotness: rand(1..5),
+      user_id: players.last.id
+    )
+    puts "player: #{players.last.username} has:
+      c: #{evaluations.last.communicability}
+      tr: #{evaluations.last.tilt_resistance}
+      m: #{evaluations.last.manners}
+      s: #{evaluations.last.sociability}
+      l: #{evaluations.last.leadership}
+      ht: #{evaluations.last.hotness} "
+  end
 end
 puts "------------- Seeding users completed -------------------"
 
 
 puts "------------- Seeding posts -------------------"
-Post.create!(photo: "https://img.ibxk.com.br/2015/06/15/15150935995121.jpg?w=1120&h=420&mode=crop&scale=both", content: "Sou bicho brabo do Mario", like: 3, community_id: lea_of_leg.id)
+Post.create!(photo: "https://img.ibxk.com.br/2015/06/15/15150935995121.jpg?w=1120&h=420&mode=crop&scale=both", content: "Sou bicho brabo do Mario", like: 3, community_id: mario.id)
 puts "------------- Seeding posts completed -------------------"
