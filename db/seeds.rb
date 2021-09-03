@@ -54,14 +54,15 @@ evaluations = []
 25.times do
   players << User.new(
     email: Faker::Internet.email,
-    password: Faker::Alphanumeric.alphanumeric(number: 10),
+    # password: Faker::Alphanumeric.alphanumeric(number: 10),
+    password: "acb123",
     username: "#{Faker::Hacker.verb}_#{Faker::Hacker.noun}",
     full_name: Faker::Name.unique.name,
     language: Faker::Nation.language,
     location: Faker::Nation.capital_city,
     age: rand(1..135)
   )
-  player_one.save!
+  players.last.save!
   puts "...added #{players.last.username}, #{players.last.full_name}"
 
 
@@ -76,6 +77,7 @@ evaluations = []
       hotness: rand(1..5),
       user_id: players.last.id
     )
+    evaluations.last.save!
     puts "player: #{players.last.username} has:
       c: #{evaluations.last.communicability}
       tr: #{evaluations.last.tilt_resistance}
