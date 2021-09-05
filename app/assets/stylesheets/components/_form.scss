@@ -3,15 +3,17 @@
   padding: 10px 20px;
   margin-top: 50px;
   border-radius: 10px;
-  box-shadow: 5px 5px 15px rgba(190, 190, 190, 0.3);
+  box-shadow: 2px 2px 10px rgba(190, 190, 190, 0.2);
   color: white;
   background: rgba(24, 24, 26, 0.5);
+  font-family: 'Fira Mono', monospace;
   h2 {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 30px;
     text-align: center;
     color: #64DFDF;
+    font-family: 'Fira Mono', monospace;
   }
   .btn {
     color: white;
@@ -22,9 +24,20 @@
     margin-bottom: 30px;
     margin-top: 30px;
     border-radius: 5px;
-    box-shadow: 0 0 5px #64DFDF,
+    box-shadow: 0 0 2.5px #64DFDF,
+                0 0 5px #64DFDF,
                 0 0 10px #64DFDF,
-                0 0 20px #64DFDF,
-                0 0 40px #64DFDF;
+                0 0 20px #64DFDF;
   }
 }
+
+.form-control {
+  border: 2px solid #8cfafa !important;
+  font-family: 'Fira Mono', monospace;
+  font-weight: bolder;
+  color: #64DFDF !important;
+  text-shadow: 0 0 10px #286b6b!important;
+  letter-spacing: 0.15rem!important;
+  background-color: rgb(155, 155, 155)!important;
+}
+

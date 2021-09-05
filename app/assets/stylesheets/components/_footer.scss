@@ -12,6 +12,7 @@ footer {
   font-family: 'Prompt', sans-serif;
   font-weight: bold;
   letter-spacing: 0.07rem;
+  text-shadow: 0 0 10px whitesmoke;
 }
 
 .row {
@@ -89,6 +90,7 @@ Newsletter-form button {
 Newsletter-form button .far {
   font-size: 20px;
   color: #d6befd;
+  text-shadow: 0 0 10px whitesmoke;
 }
 
 .social-midia .fab {
@@ -99,7 +101,7 @@ Newsletter-form button .far {
   line-height: 40px;
   font-size: 40px;
   color: #80FFDB;
-  text-shadow: 1.5px 1.5px 3px black;
+  text-shadow: 0 0 3px whitesmoke;
   // background: transparent;
   margin-right: 15px;
   cursor: pointer;

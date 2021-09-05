@@ -30,7 +30,7 @@
   background-color: rgba(255,255,255,0.07);
   border: 3px solid #9ecaed;
   box-shadow: 0 0 10px #9ecaed;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Fira Mono', monospace;
 
   h3 {
     font-size: bolder;
@@ -54,7 +54,7 @@
   box-shadow: 0 0 10px #64dfcf;
   display:flex;
   place-items: center;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Fira Mono', monospace;
 
   h5 {
     font-size: bolder;
@@ -68,7 +68,7 @@
   text-transform: capitalize;
   color: #9ecaed;
   font-size: 17px;
-  text-shadow: 0 0 10px black;
+  text-shadow: 0 0 10px whitesmoke;
   letter-spacing: 0.1rem;
 }
 
@@ -85,7 +85,7 @@
   background-color: rgba(255,255,255,0.07);
   border: 3px solid #cdff93;
   box-shadow: 0 0 10px #cdff93;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Fira Mono', monospace;
 }
 
 .card-user-profile-body {
@@ -160,9 +160,9 @@
   color:white;
   background-color: #9ecaed;
   box-shadow: 0 0 5px #9ecaed,
+  0 0 5px #9ecaed,
   0 0 10px #9ecaed,
-  0 0 20px #9ecaed,
-  0 0 40px #9ecaed;
+  0 0 20px #9ecaed;
   border:none;
 }
 
@@ -180,6 +180,22 @@
   box-shadow: 0 0 10px #9ecaed;
 }
 
+.profile-features {
+  display: flex;
+  justify-content: flex-end;
+  position:absolute;
+  top:0;
+  right: 0;
+  margin-top: 1.5rem;
+  margin-right: -17rem;
+  color: white;
+  border: 2px solid white;
+  width: 25rem;
+  height: 55rem;
+  text-align: center;
+  box-shadow: 0 0 10px whitesmoke;
+  border-radius: 12px;
+}
 // .main-body,h6{
 
 // }

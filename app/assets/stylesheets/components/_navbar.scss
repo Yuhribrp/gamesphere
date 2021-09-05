@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: linear-gradient(to bottom, #391144 40%, #381c7998);
+  background: linear-gradient(270.97deg, #953763 -21.36%,  #9166db 26.84%, #C2A0FD 64.15%, #3BF0E4 108.29%, #B2F4B6 159.03%);
+
   opacity: 0.95;
   height: 4rem;
 }
@@ -32,29 +33,11 @@
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.5);
   font-size: 23px;
-  animation: flicker 2s infinite alternate;
-  color: rgb(252, 252, 252);
+  text-shadow: 0 0 10px whitesmoke!important;
+  color: rgb(252, 252, 252)!important;
   font-family: 'Prompt', sans-serif;
+  letter-spacing: 0.1rem !important;
   position: relative;
   top:11px;
   left:15px;
 }  
-
-@keyframes flicker {
-  
-0%, 18%, 22%, 25%, 53%, 57%, 100% {
-
-    text-shadow:
-    0 0 4px rgb(240, 201, 255),
-    0 0 11px rgb(240, 201, 255),
-    0 0 19px rgb(240, 201, 255),
-    0 0 40px #7821b3,
-    0 0 80px #7821b3,
-    0 0 90px #7821b3,
-    0 0 100px #7821b3,
-    0 0 150px #7821b3;
-}
-20%, 24%, 55% {        
-    text-shadow: none;
-}
-}
