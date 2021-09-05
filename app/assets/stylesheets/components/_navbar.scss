@@ -41,3 +41,40 @@
   top:11px;
   left:15px;
 }  
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0.5%;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: none!important;
+  text-align: center;
+  list-style: none;
+  background-color: transparent!important;
+  background-clip: padding-box;
+  border: none!important;
+  border-radius: 12px;
+
+}
+
+.dropdown-item {
+  display: block;
+  width: 70%;
+  letter-spacing: 0.1rem;
+  clear: both;
+  font-weight: bolder;
+  color: #64DFDF;
+  text-shadow: 0px 0px 10px #64DFDF;
+  text-align: center;
+  white-space: nowrap;
+  background-color: none!important;
+  border: 0;
+  border-radius: 12px;
+}
