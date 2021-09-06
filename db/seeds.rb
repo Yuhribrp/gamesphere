@@ -13,6 +13,7 @@ puts "---------------Seeding Communities Started---------------"
 
 Post.delete_all
 Community.delete_all
+Evaluation.destroy_all
 User.delete_all
 
 # homepage groups
@@ -64,31 +65,53 @@ ju = User.new(email: "ju@lewagon.com", password: "123456", username: "Juquinha")
 ju.save
 
 puts "------------- Seeding users -------------------"
-player_one = User.new(
-  email: "player_one@icloud.com",
+# player_one = User.new(
+#   email: "player_one@icloud.com",
+#   password: "abc123",
+#   username: "parzival",
+#   full_name: "Wade Watts",
+#   language: "english",
+#   location: "Ohio",
+#   age: 27,
+#   photo: "https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/Avatar-6-1_a3jpsm.jpg"
+# )
+# # player_one.skip_before_action!
+# player_one.save!
+
+require "open-uri"
+
+file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/Avatar-6-1_a3jpsm.jpg')
+player_one = User.new(email: "player_one@icloud.com",
   password: "abc123",
   username: "parzival",
   full_name: "Wade Watts",
   language: "english",
   location: "Ohio",
-  age: 27,
-  photo: "https://cdn-own3dtv.pressidium.com/wp-content/uploads/2018/01/Avatar-6-1.jpg"
-)
-# player_one.skip_before_action!
-player_one.save!
+  age: 27,)
+player_one.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
-player_two = User.new(
-  email: "player_two@icloud.com",
+# player_two = User.new(
+#   email: "player_two@icloud.com",
+#   password: "abc123",
+#   username: "juquinha",
+#   full_name: "Pinkman",
+#   language: "english",
+#   location: "Ohio",
+#   age: 27,
+#   photo: "https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/image_spjcwq.jpg"
+# )
+
+# player_two.save!
+
+file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/image_spjcwq.jpg')
+player_two = User.new(email: "player_two@icloud.com",
   password: "abc123",
   username: "juquinha",
   full_name: "Pinkman",
   language: "english",
   location: "Ohio",
-  age: 27,
-  photo: "https://store.playstation.com/store/api/chihiro/00_09_000/container/NO/en/99/EP3351-CUSA08250_00-AV00000000000121/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720"
-)
-
-player_two.save!
+  age: 27,)
+player_two.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 players = []
 evaluations = []
@@ -133,5 +156,5 @@ puts "------------- Seeding users completed -------------------"
 
 
 puts "------------- Seeding posts -------------------"
-Post.create!(photo: "https://img.ibxk.com.br/2015/06/15/15150935995121.jpg?w=1120&h=420&mode=crop&scale=both", content: "Sou bicho brabo do Mario", like: 3, community_id: mario.id)
+# Post.create!(user_id: player_one.id, community_id: mario.id, photo: "https://img.ibxk.com.br/2015/06/15/15150935995121.jpg?w=1120&h=420&mode=crop&scale=both", content: "Sou bicho brabo do Mario", like: 3, community_id: mario.id)
 puts "------------- Seeding posts completed -------------------"

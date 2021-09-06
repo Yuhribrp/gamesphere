@@ -4,15 +4,17 @@
 
 <div>
   <% if @player_one != @player_two %>
-    <div class="match-card">
+    <div class="match-card avatar-large">
       <%= current_user.username %>
-      <% image_tag(current_user.photo) %>
+      <% cl_image_tag(current_user.photo.key) %>
       <%= @player_two.username %>
       <% image_tag(@player_two.photo) %>
     </div>
   <% else %>
-    <h2>no new matches for now</h2>
-    <button type="button" class="btn btn-secondary">Back to community</button>
-    <% link_to :action => "index", :id => @community%>
+    <div class="match-card">
+      <h2>no new matches for now</h2>
+      <button type="button" class="btn btn-secondary">Back to community</button>
+      <% link_to :action => "index", :id => @community%>
+    </div>
   <% end %>
 </div>
