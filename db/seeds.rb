@@ -71,7 +71,8 @@ player_one = User.new(
   full_name: "Wade Watts",
   language: "english",
   location: "Ohio",
-  age: 27
+  age: 27,
+  photo: "https://cdn-own3dtv.pressidium.com/wp-content/uploads/2018/01/Avatar-6-1.jpg"
 )
 # player_one.skip_before_action!
 player_one.save!
@@ -83,7 +84,8 @@ player_two = User.new(
   full_name: "Pinkman",
   language: "english",
   location: "Ohio",
-  age: 27
+  age: 27,
+  photo: "https://store.playstation.com/store/api/chihiro/00_09_000/container/NO/en/99/EP3351-CUSA08250_00-AV00000000000121/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720"
 )
 
 player_two.save!

@@ -11,6 +11,7 @@
       </div>
       <div class="modal-body">
         <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" id="post-avatar" alt="avatar">
+        <%# <%= @player_two.username %> %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -39,7 +40,7 @@
   </div>
 
   <div class="post-msg form-login">
-      <% if current_user =! nil %>
+      <% if user_signed_in? %>
     <div class="d-flex justify-content-around">
       <div class="post-form">
         <%= simple_form_for [@community, @post] do |f| %>
@@ -56,7 +57,7 @@
     <hr class="hr">
     <% end %>
     <% @posts.each do |post| %>
-      <%# <%= current_user.username %>
+      <%# <%= current_user.username %> %>
       <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" id="post-avatar" alt="avatar"><h6>User</h6>
       <% if post.photo %>
         <h5><%= post.content %></h5>
