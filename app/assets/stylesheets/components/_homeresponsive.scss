@@ -1,3 +1,474 @@
+@media(max-width: 1700px) {
+  .bg-image {
+    width: 131%;
+  }
+  .banner {
+    padding: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    background-position: center;
+    p {
+      display: flex;
+      justify-content: space-around;
+      background-position: center;
+      color: white;
+      /* opacity: .95; */
+      font-weight: bolder;
+      text-shadow: 0 0 20px rgb(0, 0, 0);
+      font-size: 30px;
+      margin: 20;
+      padding: -200px;
+      line-height: 3.0;
+      position: relative;
+      bottom: 60px;
+      left: 4.8rem;
+      font-family: 'Prompt', sans-serif;
+    }
+  }
+
+  .sphere-btn {
+    padding-top: 4rem;
+    position: relative;
+    bottom: 190px;
+    left: 1070px;
+    height: 180px;
+    width: 180px;
+  }
+
+  .card-lol {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-dota {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-fortnite {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-valorant {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-gta {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-wow {
+    width: 480px;
+    height: 250px;
+  }
+
+  .cards {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    h3{
+      font-family: monospace;
+      font-size: 30px;
+      font-weight: bolder;
+      color: white;
+      position: relative;
+      top: 105px;
+      right: 10px;
+      text-shadow: 2px 2px 3px black;
+      opacity: .95;
+      display: flex;
+      text-align: left;
+      text-shadow: 0 0 10px whitesmoke;
+    }
+  }
+}
+
+@media(max-width: 1600px) {
+  .bg-image {
+    width: 131%;
+  }
+  .banner {
+    padding: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    background-position: center;
+    p {
+      display: flex;
+      justify-content: space-around;
+      background-position: center;
+      color: white;
+      /* opacity: .95; */
+      font-weight: bolder;
+      text-shadow: 0 0 20px rgb(0, 0, 0);
+      font-size: 30px;
+      margin: 20;
+      padding: -200px;
+      line-height: 3.0;
+      position: relative;
+      bottom: 60px;
+      left: 4.8rem;
+      font-family: 'Prompt', sans-serif;
+    }
+  }
+
+  .sphere-btn {
+    padding-top: 4rem;
+    position: relative;
+    bottom: 190px;
+    left: 950px;
+    height: 180px;
+    width: 180px;
+  }
+
+  .card-lol {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-dota {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-fortnite {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-valorant {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-gta {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-wow {
+    width: 480px;
+    height: 250px;
+  }
+
+  .cards {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    h3{
+      font-family: monospace;
+      font-size: 30px;
+      font-weight: bolder;
+      color: white;
+      position: relative;
+      top: 105px;
+      right: 10px;
+      text-shadow: 2px 2px 3px black;
+      opacity: .95;
+      display: flex;
+      text-align: left;
+      text-shadow: 0 0 10px whitesmoke;
+    }
+  }
+}
+
+@media(max-width: 1500px) {
+  .bg-image {
+    width: 131%;
+  }
+  .banner {
+    padding: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    background-position: center;
+    p {
+      display: flex;
+      justify-content: space-around;
+      background-position: center;
+      color: white;
+      /* opacity: .95; */
+      font-weight: bolder;
+      text-shadow: 0 0 20px rgb(0, 0, 0);
+      font-size: 30px;
+      margin: 20;
+      padding: -200px;
+      line-height: 3.0;
+      position: relative;
+      bottom: 60px;
+      left: 4.8rem;
+      font-family: 'Prompt', sans-serif;
+    }
+  }
+
+  .sphere-btn {
+    padding-top: 4rem;
+    position: relative;
+    bottom: 190px;
+    left: 950px;
+    height: 180px;
+    width: 180px;
+  }
+
+  .card-lol {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-dota {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-fortnite {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-valorant {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-gta {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-wow {
+    width: 480px;
+    height: 250px;
+  }
+
+  .cards {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    h3{
+      font-family: monospace;
+      font-size: 30px;
+      font-weight: bolder;
+      color: white;
+      position: relative;
+      top: 105px;
+      right: 10px;
+      text-shadow: 2px 2px 3px black;
+      opacity: .95;
+      display: flex;
+      text-align: left;
+      text-shadow: 0 0 10px whitesmoke;
+    }
+  }
+}
+
+@media(max-width: 1450px) {
+  .bg-image {
+    width: 131%;
+  }
+  .banner {
+    padding: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    background-position: center;
+    p {
+      display: flex;
+      justify-content: space-around;
+      background-position: center;
+      color: white;
+      /* opacity: .95; */
+      font-weight: bolder;
+      text-shadow: 0 0 20px rgb(0, 0, 0);
+      font-size: 30px;
+      margin: 20;
+      padding: -200px;
+      line-height: 3.0;
+      position: relative;
+      bottom: 60px;
+      left: 4.8rem;
+      font-family: 'Prompt', sans-serif;
+    }
+  }
+
+  .sphere-btn {
+    padding-top: 4rem;
+    position: relative;
+    bottom: 190px;
+    left: 900px;
+    height: 180px;
+    width: 180px;
+  }
+
+  .card-lol {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-dota {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-fortnite {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-valorant {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-gta {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-wow {
+    width: 480px;
+    height: 250px;
+  }
+
+  .cards {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    h3{
+      font-family: monospace;
+      font-size: 30px;
+      font-weight: bolder;
+      color: white;
+      position: relative;
+      top: 105px;
+      right: 10px;
+      text-shadow: 2px 2px 3px black;
+      opacity: .95;
+      display: flex;
+      text-align: left;
+      text-shadow: 0 0 10px whitesmoke;
+    }
+  }
+}
+
+@media(max-width: 1400px) {
+  .bg-image {
+    width: 131%;
+  }
+  .banner {
+    padding: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    background-position: center;
+    p {
+      display: flex;
+      justify-content: space-around;
+      background-position: center;
+      color: white;
+      /* opacity: .95; */
+      font-weight: bolder;
+      text-shadow: 0 0 20px rgb(0, 0, 0);
+      font-size: 30px;
+      margin: 20;
+      padding: -200px;
+      line-height: 3.0;
+      position: relative;
+      bottom: 60px;
+      left: 4.8rem;
+      font-family: 'Prompt', sans-serif;
+    }
+  }
+
+  .sphere-btn {
+    padding-top: 4rem;
+    position: relative;
+    bottom: 190px;
+    left: 850px;
+    height: 180px;
+    width: 180px;
+  }
+
+  .card-lol {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-dota {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-fortnite {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-valorant {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-gta {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-wow {
+    width: 480px;
+    height: 250px;
+  }
+
+  .cards {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    h3{
+      font-family: monospace;
+      font-size: 30px;
+      font-weight: bolder;
+      color: white;
+      position: relative;
+      top: 105px;
+      right: 10px;
+      text-shadow: 2px 2px 3px black;
+      opacity: .95;
+      display: flex;
+      text-align: left;
+      text-shadow: 0 0 10px whitesmoke;
+    }
+  }
+}
+
+@media(max-width: 1300px) {
+  .sphere-btn {
+    padding-top: 4rem;
+    position: relative;
+    bottom: 190px;
+    left: 830px;
+    height: 180px;
+    width: 180px;
+  }
+}  
+
 @media(max-width: 1200px) {
   .bg-image {
     width: 131%;
@@ -76,6 +547,282 @@
     h3{
       font-family: monospace;
       font-size: 30px;
+      font-weight: bolder;
+      color: white;
+      position: relative;
+      top: 105px;
+      right: 10px;
+      text-shadow: 2px 2px 3px black;
+      opacity: .95;
+      display: flex;
+      text-align: left;
+      text-shadow: 0 0 10px whitesmoke;
+    }
+  }
+}
+
+@media(max-width: 1150px) {
+  .bg-image {
+    width: 137%;
+  }
+  .banner {
+    padding: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    background-position: center;
+    p {
+      display: flex;
+      justify-content: space-around;
+      background-position: center;
+      color: white;
+      /* opacity: .95; */
+      font-weight: bolder;
+      text-shadow: 0 0 20px rgb(0, 0, 0);
+      font-size: 22px;
+      margin: 20;
+      padding: -200px;
+      line-height: 3.0;
+      position: relative;
+      bottom: 60px;
+      left: 4.8rem;
+      font-family: 'Prompt', sans-serif;
+    }
+  }
+
+  .sphere-btn {
+    padding-top: 4rem;
+    position: relative;
+    bottom: 190px;
+    left: 770px;
+    height: 180px;
+    width: 180px;
+  }
+
+  .card-lol {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-dota {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-fortnite {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-valorant {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-gta {
+    width: 480px;
+    height: 250px;
+  }
+
+  .card-wow {
+    width: 480px;
+    height: 250px;
+  }
+
+  .cards {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    h3{
+      font-family: monospace;
+      font-size: 30px;
+      font-weight: bolder;
+      color: white;
+      position: relative;
+      top: 105px;
+      right: 10px;
+      text-shadow: 2px 2px 3px black;
+      opacity: .95;
+      display: flex;
+      text-align: left;
+      text-shadow: 0 0 10px whitesmoke;
+    }
+  }
+}
+
+@media(max-width: 1150px) {
+  .bg-image {
+    width: 137%;
+  }
+  .banner {
+    padding: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    background-position: center;
+    p {
+      display: flex;
+      justify-content: space-around;
+      background-position: center;
+      color: white;
+      /* opacity: .95; */
+      font-weight: bolder;
+      text-shadow: 0 0 20px rgb(0, 0, 0);
+      font-size: 22px;
+      margin: 20;
+      padding: -200px;
+      line-height: 3.0;
+      position: relative;
+      bottom: 60px;
+      left: 4.8rem;
+      font-family: 'Prompt', sans-serif;
+    }
+  }
+
+  .sphere-btn {
+    padding-top: 4rem;
+    position: relative;
+    bottom: 190px;
+    left: 770px;
+    height: 180px;
+    width: 180px;
+  }
+
+  .card-lol {
+    width: 430px;
+    height: 250px;
+  }
+
+  .card-dota {
+    width: 430px;
+    height: 250px;
+  }
+
+  .card-fortnite {
+    width: 430px;
+    height: 250px;
+  }
+
+  .card-valorant {
+    width: 430px;
+    height: 250px;
+  }
+
+  .card-gta {
+    width: 430px;
+    height: 250px;
+  }
+
+  .card-wow {
+    width: 430px;
+    height: 250px;
+  }
+
+  .cards {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    h3{
+      font-family: monospace;
+      font-size: 28px;
+      font-weight: bolder;
+      color: white;
+      position: relative;
+      top: 105px;
+      right: 10px;
+      text-shadow: 2px 2px 3px black;
+      opacity: .95;
+      display: flex;
+      text-align: left;
+      text-shadow: 0 0 10px whitesmoke;
+    }
+  }
+}
+
+@media(max-width: 1150px) {
+  .bg-image {
+    width: 160%;
+  }
+  .banner {
+    padding: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    background-position: center;
+    p {
+      display: flex;
+      justify-content: space-around;
+      background-position: center;
+      color: white;
+      /* opacity: .95; */
+      font-weight: bolder;
+      text-shadow: 0 0 20px rgb(0, 0, 0);
+      font-size: 22px;
+      margin: 20;
+      padding: -200px;
+      line-height: 3.0;
+      position: relative;
+      bottom: 60px;
+      left: 4.8rem;
+      font-family: 'Prompt', sans-serif;
+    }
+  }
+
+  .sphere-btn {
+    padding-top: 4rem;
+    position: relative;
+    bottom: 190px;
+    left: 770px;
+    height: 180px;
+    width: 180px;
+  }
+
+  .card-lol {
+    width: 430px;
+    height: 250px;
+  }
+
+  .card-dota {
+    width: 430px;
+    height: 250px;
+  }
+
+  .card-fortnite {
+    width: 430px;
+    height: 250px;
+  }
+
+  .card-valorant {
+    width: 430px;
+    height: 250px;
+  }
+
+  .card-gta {
+    width: 430px;
+    height: 250px;
+  }
+
+  .card-wow {
+    width: 430px;
+    height: 250px;
+  }
+
+  .cards {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    h3{
+      font-family: monospace;
+      font-size: 28px;
       font-weight: bolder;
       color: white;
       position: relative;
