@@ -45,7 +45,7 @@ mario = Community.create!(
   img_url: "https://img.ibxk.com.br/2015/06/15/15150935995121.jpg?w=1120&h=420&mode=crop&scale=both"
 )
 
-# Faker::Game.title
+Faker::Game.title
 25.times do
   Community.create!(title: Faker::Game.title)
   puts "seeded with -- #{Community.last.title}"
