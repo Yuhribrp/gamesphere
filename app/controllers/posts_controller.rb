@@ -15,6 +15,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     # we need `community_id` to associate post with corresponding community
     @post.community = @community
+    @post.user = current_user
     @post.save
     redirect_to :action => "index", :id => @community
   end
@@ -28,12 +29,6 @@ class PostsController < ApplicationController
     redirect_to :action => "index", :id => @community
   end
 
-  def find_users
-    @player_one = [current_user.age, current_user.location, current_user.language]
-    @player_two = User.where(params[age: current_user.age, location: current_user.location, language: current_user.language])
-    @player_two = player_two.sample
-  end
-
   def match
     if @player_one != @player_two
       @player_two
@@ -43,7 +38,7 @@ class PostsController < ApplicationController
     end
   end
 
-  private
+    private
 
   def post_params
     params.require(:post).permit(:content, :photo, :video)

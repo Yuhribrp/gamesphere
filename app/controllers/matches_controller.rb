@@ -1,18 +1,20 @@
 class MatchesController < ApplicationController
-  def find_users
-    @player_one = [current_user.age, current_user.location, current_user.language]
-    @player_two = User.where(params[age: current_user.age, location: current_user.location, language: current_user.language])
-    @player_two = player_two.sample
-  end
-
-  def match
-    if @player_one != @player_two
-      @player_two
-    else
-      redirect matches_path
-    end
-  end
 
   def index
+    @player_one = current_user
+    @player_two = User.where(age: current_user.age, language: current_user.language, location: current_user.location).sample
+    # if @player_one != @player_two
+    #   @player_two
+    # else
+    #   # no matches today
+    #   redirect_to :action => "index", :id => @community
+    # end
+  end
+
+  def create
+    @match = Match.find(params[:match_id])
+    @match = Match.new(@player_one[:id], @player_two[:id])
+    @match.save
+    redirect_to :action => "index", :id => @community
   end
 end

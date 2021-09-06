@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @user= User.find(params[:id])
+    @user = User.find(params[:id])
     @evaluation = Evaluation.find(@user.id)
   end
 

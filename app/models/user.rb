@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :communities, through: :memberships
   has_many :evaluations
   has_many :gametags
+  has_many :posts
+  has_one_attached :photo
 
   # validates :username, presence: true, uniqueness: true
   # validates :age, presence: true
