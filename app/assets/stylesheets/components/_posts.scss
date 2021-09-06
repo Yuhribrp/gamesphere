@@ -1,16 +1,3 @@
-.community-h1 {
-    font-size: 120px;
-    text-align: center;
-    font-weight: bolder;
-    margin: 0, auto;
-    position: relative;
-    bottom: 50px;
-    animation: flicker 2s infinite alternate;
-    color: rgb(252, 252, 252);
-    font-family: 'Prompt', sans-serif;
-    color: #64DFDF;
-    padding: 150px;
-}
 
 .main-page {
   display: flex;
@@ -19,31 +6,235 @@
 }
 
 .sidebar {
-  flex: 0 0 200px;
+  flex: 0 0 300px;
+  border-right: 1px solid whitesmoke;
+  ul {
+    margin-top:2rem;
+    
+  }
+  h4 {
+    text-align: center;
+    padding:0.5rem;
+    font-family: 'Fira Mono', monospace!important;
+    color:white;
+    text-shadow: 0px 0px 10px whitesmoke;
+  }
 }
 
 .stuffs {
-  flex: 0 0 400px;
+  flex: 0 0 500px;
+  border-left: 1px solid whitesmoke;
 }
 
 .post-msg {
   flex-grow: 1;
-  width: 200px;
-  height: auto;
+  // width: 200px;
+  // height: auto;
+  box-shadow: none!important;
+  margin-top: 0 !important;
+  border-radius: 0!important;
+  background-color: hsl(215, 15%, 16%)!important;
+  font-family: 'Fira Mono', monospace!important;
 
+  h5 {
+    word-break: break-all;
+    margin-bottom: 5rem;
+    // color:white;
+    // text-shadow: 0px 0px 10px whitesmoke;
+  }
+
+  small {
+  }
+
+  h6 {
+    margin-top: 1rem;
+    position:relative;
+    left:3.2rem;
+  }
 }
-
+.hr {
+  width: 100%!important;
+}
 .post-img {
-  width: 80%;
+  width: 60%;
   object-fit: contain;
   display: block;
   margin: 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
 }
 
 .post-form {
-align-items: center;
+// border: 1px solid white;
+width: 60%;
+padding:2rem;
+background-color: hsl(215, 15%, 16%)!important;
+margin-right:auto;
 }
 
+#post-avatar {
+  position: relative;
+  width: 5rem;
+  border: 2px solid #64DFDF;
+  box-shadow: 0 0 10px #64DFDF;
+}
 .post-time {
   text-decoration: muted;
+}
+
+input[type="submit" i] {
+  appearance: auto;
+  user-select: none;
+  white-space: pre;
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  box-sizing: border-box;
+  border-radius: .85rem;
+  color:white;
+  text-shadow: 0px 0px 10px whitesmoke;
+  background-color: #64DFDF;
+  box-shadow: 0 0 5px #64DFDF,
+  0 0 2px #64DFDF,
+  0 0 5px #64DFDF,
+  0 0 10px #64DFDF;
+  border:none;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border:none!important;
+  border-image: initial;
+  padding: 0.6rem;
+  font-family: 'Fira Mono', monospace!important;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  margin-top:1rem;
+}
+
+input[type="submit" i]:hover {
+  background-color: #89d6d6;
+  box-shadow: 0 0 5px #89d6d6,
+  0 0 5px #89d6d6,
+  0 0 10px #89d6d6,
+  0 0 20px #89d6d6;
+}
+.post-form {
+
+  textarea {
+  background-color: hsl(215, 15%, 16%)!important;
+  height: 10rem;
+  }
+}
+.main-card {
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: image-url('lol3.jpg');
+  border-bottom: 1px solid whitesmoke;
+
+    h1 {
+      font-size: 90px;
+      text-align: center;
+      font-weight: bolder;
+      margin: 0, auto;
+      position: relative;
+      bottom: 50px;
+      animation: flicker 2s infinite alternate;
+      color: rgb(252, 252, 252);
+      font-family: 'Prompt', sans-serif;
+      color: #64DFDF;
+      padding: 150px;
+}
+}
+
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: 'Fira Mono', monospace!important;
+  font-size: 13px;
+  line-height: inherit;
+}
+
+.cmt-feature {
+  // display: flex;
+  // justify-content: flex-end;
+  // position:absolute;
+  // top:0;
+  // right: 0;
+  margin-top: 6rem;
+  margin-left: 3.7rem;
+  color: white;
+  border: 2px solid white;
+  width: 25rem;
+  height: 25rem;
+  text-align: center;
+  box-shadow: 0 0 10px whitesmoke;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  h4 {
+    position:absolute;
+    top:53.8rem;
+    right: 12rem;
+    margin-top: 2.5rem;
+  }
+}
+
+.cmt-feature2 {
+  // display: flex;
+  // justify-content: flex-end;
+  // position:absolute;
+  // top:0;
+  // right: 0;
+  margin-top: 3rem;
+  margin-left: 3.7rem;
+  color: white;
+  border: 2px solid white;
+  width: 25rem;
+  height: 25rem;
+  text-align: center;
+  box-shadow: 0 0 10px whitesmoke;
+  border-radius: 12px;
+}
+
+.main-league {
+  width: 100%;
+  background-size:contain;
+  margin-left: 1rem;
+  // object-fit: contain;
+  // display: block;
+  // margin: 0 auto;
+}
+
+.zed {
+  background-size:contain;
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  bottom:0;
+}
+
+.vi {
+  background-size:contain;
+  width: 10rem;
+  height: 10rem;
+  animation: spin 4s infinite linear;
+}
+
+.riven {
+  background-size:contain;
+  width: 10rem;
+  height: 10rem;
+  position:absolute;
+  bottom:-6.47rem;
+  right: 31.33rem;
 }

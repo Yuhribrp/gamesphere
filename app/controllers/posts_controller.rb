@@ -23,6 +23,11 @@ class PostsController < ApplicationController
     @community = Community.find[params[:id]]
   end
 
+  def destroy
+    @post.destroy
+    redirect_to :action => "index", :id => @community
+  end
+
   private
 
   def post_params
