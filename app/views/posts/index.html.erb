@@ -1,6 +1,25 @@
-<%# <div>
-  <h1 class="community-h1"  ><%= @community.title %>
-<%# </div> %>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">You have a match!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" id="post-avatar" alt="avatar">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">See Match</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="main-card card-banner" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("mf.jpg")'>
   <h1 class="list-title"><%= @community.title %></h1>
 </div>
@@ -55,9 +74,14 @@
   </div>
 
   <div class="stuffs">
+    <!-- Button trigger modal -->
     <div>
-      <button href="#" class="match-btn">FIND MATCH</button>
+      <button type="button" href="#" class="match-btn" data-toggle="modal" data-target="#exampleModal">FIND MATCH</button>
     </div>
+
+
+
+
       <div class="cmt-feature">
         <h4>Members</h4>
         <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" id="post-avatar" alt="avatar">

@@ -45,23 +45,23 @@ mario = Community.create!(
   img_url: "https://img.ibxk.com.br/2015/06/15/15150935995121.jpg?w=1120&h=420&mode=crop&scale=both"
 )
 
-Faker::Game.title
-25.times do
-  Community.create!(title: Faker::Game.title)
-  puts "seeded with -- #{Community.last.title}"
-  uri = CGI.escape(Community.last.title)
-  # Community.last.img_url="https://loremflickr.com/320/240/#{uri}"
-  Community.update((Community.last.id), img_url: "https://loremflickr.com/320/240/#{uri}")
-  puts "cs::uri=#{uri}"
-  puts "cs::img_url=#{Community.last.img_url}"
-end
+
+# Faker::Game.title
+# 25.times do
+#   Community.create!(title: Faker::Game.title)
+#   puts "seeded with -- #{Community.last.title}"
+#   uri = CGI.escape(Community.last.title)
+#   # Community.last.img_url="https://loremflickr.com/320/240/#{uri}"
+#   Community.update((Community.last.id), img_url: "https://loremflickr.com/320/240/#{uri}")
+#   puts "cs::uri=#{uri}"
+#   puts "cs::img_url=#{Community.last.img_url}"
+# end
 puts "------------- Seeding communities completed -------------------"
 
 
 puts "_______________________ Seeding User _________________________"
 ju = User.new(email: "ju@lewagon.com", password: "123456", username: "Juquinha")
 ju.save
-
 
 puts "------------- Seeding users -------------------"
 player_one = User.new(
@@ -70,11 +70,23 @@ player_one = User.new(
   username: "parzival",
   full_name: "Wade Watts",
   language: "english",
-  location: "Columbus, Ohio",
+  location: "Ohio",
   age: 27
 )
 # player_one.skip_before_action!
 player_one.save!
+
+player_two = User.new(
+  email: "player_two@icloud.com",
+  password: "abc123",
+  username: "juquinha",
+  full_name: "Pinkman",
+  language: "english",
+  location: "Ohio",
+  age: 27
+)
+
+player_two.save!
 
 players = []
 evaluations = []
