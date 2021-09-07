@@ -18,6 +18,11 @@ class CommunitiesController < ApplicationController
   #   @post = Post.new
   # end
 
+  def show
+    @community = Self.find_community
+    # @post = Post.new
+  end
+
   def find_community
     @community = Community.find[params[:id]]
   end
