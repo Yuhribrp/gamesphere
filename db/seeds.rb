@@ -59,74 +59,42 @@ league_of_legends = Community.create!(
 # end
 puts "------------- Seeding communities completed -------------------"
 
-
-
 puts "_______________________ Seeding User _________________________"
-=======
 # puts "_______________________ Seeding User _________________________"
 
 # ju = User.new(email: "ju@lewagon.com", password: "123456", username: "Juquinha")
 # ju.save
 
 puts "------------- Seeding users -------------------"
-# player_one = User.new(
-#   email: "player_one@icloud.com",
-#   password: "abc123",
-#   username: "parzival",
-#   full_name: "Wade Watts",
-#   language: "english",
-#   location: "Ohio",
-#   age: 27,
-#   photo: "https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/Avatar-6-1_a3jpsm.jpg"
-# )
-# # player_one.skip_before_action!
-# player_one.save!
 
-# require "open-uri"
+require "open-uri"
 
+file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/Avatar-6-1_a3jpsm.jpg')
+player_one = User.new(email: "player_one@icloud.com",
+  password: "abc123",
+  username: "parzival",
+  full_name: "Wade Watts",
+  language: "english",
+  location: "Ohio",
+  age: 27)
+player_one.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+player_one.save
 
-# file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/Avatar-6-1_a3jpsm.jpg')
-# player_one = User.new(email: "player_one@icloud.com",
-#   password: "abc123",
-#   username: "parzival",
-#   full_name: "Wade Watts",
-#   language: "english",
-#   location: "Ohio",
-#   age: 27,)
-# player_one.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
-
-
-# player_two = User.new(
-#   email: "player_two@icloud.com",
-#   password: "abc123",
-#   username: "juquinha",
-#   full_name: "Pinkman",
-#   language: "english",
-#   location: "Ohio",
-#   age: 27,
-#   photo: "https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/image_spjcwq.jpg"
-# )
-
-# player_two.save!
-
-
-# file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/image_spjcwq.jpg')
-# player_two = User.new(email: "player_two@icloud.com",
-#   password: "abc123",
-#   username: "juquinha",
-#   full_name: "Pinkman",
-#   language: "english",
-#   location: "Ohio",
-#   age: 27,)
-# player_two.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
-
-
+file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/image_spjcwq.jpg')
+player_two = User.new(email: "player_two@icloud.com",
+  password: "abc123",
+  username: "juquinha",
+  full_name: "Pinkman",
+  language: "english",
+  location: "Ohio",
+  age: 27)
+player_two.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+player_two.save
 # players = []
 # evaluations = []
 
-
 # 2.times do
-=======
+
 # 25.times do
 
 #   players << User.new(
@@ -139,13 +107,12 @@ puts "------------- Seeding users -------------------"
 #     location: Faker::Nation.capital_city,
 
 #     age: rand(1..50)
-=======
+
 #     age: rand(1..135)
 
 #   )
 #   players.last.save!
 #   puts "...added #{players.last.username}, #{players.last.full_name}"
-
 
 #   rand(3..10).times do
 #     puts "-----seeding evals------"
@@ -169,7 +136,6 @@ puts "------------- Seeding users -------------------"
 #   end
 # end
 puts "------------- Seeding users completed -------------------"
-
 
 puts "------------- Seeding posts -------------------"
 # Post.create!(user_id: player_one.id, community_id: mario.id, photo: "https://img.ibxk.com.br/2015/06/15/15150935995121.jpg?w=1120&h=420&mode=crop&scale=both", content: "Sou bicho brabo do Mario", like: 3, community_id: mario.id)

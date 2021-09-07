@@ -61,7 +61,7 @@
       <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" id="post-avatar" alt="avatar"><h6><%= current_user.username.capitalize %></h6>
       <% if post.photo %>
         <h5><%= post.content %></h5>
-        <%# <%= image_tag(post.photo, class: "post-img") %>
+        <%# <%= image_tag(post.photo, class: "post-img") %> %>
       <% elsif post.video %>
         <p><%= post.content %></p>
         <%= video_tag(post.video) %>
