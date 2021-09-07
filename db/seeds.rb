@@ -61,8 +61,8 @@ puts "------------- Seeding communities completed -------------------"
 
 
 puts "_______________________ Seeding User _________________________"
-ju = User.new(email: "ju@lewagon.com", password: "123456", username: "Juquinha")
-ju.save
+# ju = User.new(email: "ju@lewagon.com", password: "123456", username: "Juquinha")
+# ju.save
 
 puts "------------- Seeding users -------------------"
 # player_one = User.new(
@@ -81,14 +81,14 @@ puts "------------- Seeding users -------------------"
 require "open-uri"
 
 file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/Avatar-6-1_a3jpsm.jpg')
-player_one = User.new(email: "player_one@icloud.com",
+player_one = User.create!(email: "player_one@icloud.com",
   password: "abc123",
   username: "parzival",
   full_name: "Wade Watts",
   language: "english",
   location: "Ohio",
-  age: 27,)
-player_one.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+  age: 27)
+player_one.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 
 # player_two = User.new(
 #   email: "player_two@icloud.com",
@@ -104,54 +104,55 @@ player_one.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg'
 # player_two.save!
 
 file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/image_spjcwq.jpg')
-player_two = User.new(email: "player_two@icloud.com",
+player_two = User.create!(
+  email: "player_two@icloud.com",
   password: "abc123",
   username: "juquinha",
   full_name: "Pinkman",
   language: "english",
   location: "Ohio",
-  age: 27,)
-player_two.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+  age: 27)
+player_two.photo.attach(io: file, filename: 'caveira', content_type: 'image/jpg')
 
-players = []
-evaluations = []
+# players = []
+# evaluations = []
 
-25.times do
-  players << User.new(
-    email: Faker::Internet.email,
-    # password: Faker::Alphanumeric.alphanumeric(number: 10),
-    password: "acb123",
-    username: "#{Faker::Hacker.verb}_#{Faker::Hacker.noun}",
-    full_name: Faker::Name.unique.name,
-    language: Faker::Nation.language,
-    location: Faker::Nation.capital_city,
-    age: rand(1..135)
-  )
-  players.last.save!
-  puts "...added #{players.last.username}, #{players.last.full_name}"
+# 2.times do
+#   players << User.new(
+#     email: Faker::Internet.email,
+#     # password: Faker::Alphanumeric.alphanumeric(number: 10),
+#     password: "acb123",
+#     username: "#{Faker::Hacker.verb}_#{Faker::Hacker.noun}",
+#     full_name: Faker::Name.unique.name,
+#     language: Faker::Nation.language,
+#     location: Faker::Nation.capital_city,
+#     age: rand(1..50)
+#   )
+#   players.last.save!
+#   puts "...added #{players.last.username}, #{players.last.full_name}"
 
 
-  rand(3..10).times do
-    puts "-----seeding evals------"
-    evaluations << Evaluation.new(
-      communicability: rand(1..5),
-      tilt_resistance: rand(1..5),
-      manners: rand(1..5),
-      sociability: rand(1..5),
-      leadership: rand(1..5),
-      hotness: rand(1..5),
-      user_id: players.last.id
-    )
-    evaluations.last.save!
-    puts "player: #{players.last.username} has:
-      c: #{evaluations.last.communicability}
-      tr: #{evaluations.last.tilt_resistance}
-      m: #{evaluations.last.manners}
-      s: #{evaluations.last.sociability}
-      l: #{evaluations.last.leadership}
-      ht: #{evaluations.last.hotness} "
-  end
-end
+#   rand(3..10).times do
+#     puts "-----seeding evals------"
+#     evaluations << Evaluation.new(
+#       communicability: rand(1..5),
+#       tilt_resistance: rand(1..5),
+#       manners: rand(1..5),
+#       sociability: rand(1..5),
+#       leadership: rand(1..5),
+#       hotness: rand(1..5),
+#       user_id: players.last.id
+#     )
+#     evaluations.last.save!
+#     puts "player: #{players.last.username} has:
+#       c: #{evaluations.last.communicability}
+#       tr: #{evaluations.last.tilt_resistance}
+#       m: #{evaluations.last.manners}
+#       s: #{evaluations.last.sociability}
+#       l: #{evaluations.last.leadership}
+#       ht: #{evaluations.last.hotness} "
+#   end
+# end
 puts "------------- Seeding users completed -------------------"
 
 
