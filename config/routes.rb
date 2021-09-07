@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     resources :posts, only: [:index, :new, :create]
     resources :matches, only: [:index, :create]
   end
+  resources :users, only: [:edit, :update]
   get '/profile/:id', to: 'pages#profile', as: 'profile'
 end
