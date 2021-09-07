@@ -11,11 +11,12 @@
       </div>
       <div class="modal-body">
         <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" id="post-avatar" alt="avatar">
+        <%# <%= cl_image_tag @player_two.photo.key, height: 200, width: 200, crop: :fill %> %>
         <%# <%= @player_two.username %> %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">See Match</button>
+        <%= link_to "See match", community_matches_path(@community), class: "btn btn-secondary" %>
       </div>
     </div>
   </div>

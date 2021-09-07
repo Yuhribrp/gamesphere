@@ -12,9 +12,14 @@ class MatchesController < ApplicationController
   end
 
   def create
-    @match = Match.find(params[:match_id])
-    @match = Match.new(@player_one[:id], @player_two[:id])
-    @match.save
-    redirect_to :action => "index", :id => @community
+    if @player_one != @player_two
+      @match = Match.find(params[:match_id])
+      @match = Match.new(@player_one[:id], @player_two[:id])
+      if @match.save
+        puts "ahhhhhhhh"
+      end
+    else
+      redirect_to communities_path
+    end
   end
 end
