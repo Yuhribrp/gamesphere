@@ -1,0 +1,16 @@
+<div class="login-container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-4">
+      <div class="form-login">
+        <%= simple_form_for (@user) do |f| %>
+        <%= f.input :full_name %>
+        <%= f.input :location %>
+        <%= f.input :language %>
+        <%= f.input :age %>
+        <%= f.button :submit, "Update", class: "btn btn-primary" %>
+        <% end %>
+        <%= link_to "Back to Profile", profile_path(current_user) %>
+      </div>  
+    </div>
+  </div>
+</div>   
