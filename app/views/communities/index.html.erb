@@ -1,4 +1,4 @@
- <div class="communities-index"> 
+ <div class="communities-index">
   <div class="communities-info">
     <h2>Find and Join Your Favorite Gaming Communities</h2>
   </div>
@@ -76,15 +76,17 @@
 
         <% @communities.each do |community| %>
         <div class="card-seed">
-          <h4> <%= community.title %> </h4>
-          <img src="<%= community.img_url%>" class="cmt-image-seed">
-                    <%# <a href="#">
+            <%= link_to("communities/#{community.id}/posts") do %>
+              <img src="<%= community.img_url %>" class="cmt-image-seed">
+            <% end %>
+
+            <h3> <%= community.title %> </h3>
             <span></span>
             <span></span>
             <span></span>
             JOIN
-          </a> %>
-        </div>
+            </a>
+          </div>
         <% end %>
       </div>
     </div>
