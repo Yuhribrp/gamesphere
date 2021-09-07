@@ -10,8 +10,5 @@ class User < ApplicationRecord
   has_many :posts
   has_one_attached :photo
 
-  # validates :username, presence: true, uniqueness: true
-  # validates :age, presence: true
-  # validates :language, presence: true
-  # validates :location, presence: true
+  validates :username, presence: true, uniqueness: true
 end

@@ -61,6 +61,7 @@
     color: white;
     text-shadow: 0 0 10px whitesmoke;
     text-transform: capitalize;
+    font-size: 17px;
   }
 }
 
@@ -182,7 +183,7 @@
 
 .profile-features {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   position:absolute;
   top:0;
   right: 0;
@@ -195,7 +196,22 @@
   text-align: center;
   box-shadow: 0 0 10px whitesmoke;
   border-radius: 12px;
+
+  h3 {
+    margin-top: 1rem;
+    color: white;
+    text-shadow: 0 0 10px whitesmoke;
+  }
 }
+
+
+// .communities-profile {
+
+// }
+
+// .matches-profile {
+//   display:flex;
+// }
 // .main-body,h6{
 
 // }
