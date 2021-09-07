@@ -186,10 +186,6 @@ players.last.photo.attach(io: file, filename: 'image_justin.jpg', content_type: 
 puts "::justin.photo:: #{players.last.photo}"
 
 
-
-
-
-
 puts "------------- Seeding users completed -------------------"
 
 
