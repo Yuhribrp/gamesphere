@@ -33,10 +33,10 @@
     </div>
     <ul>
       <li><img src="https://res.cloudinary.com/yuhri/image/upload/v1630825667/lolicon_p5keax.png" class="main-league"></li>
+      <li><h4><%= link_to "My Profile", profile_path(current_user) %><h4></li>
+      <li><h4>Messages<h4></li>
       <li><h4>Friends<h4></li>
-      <li><h4>Message<h4></li>
       <li><h4>Matches<h4></li>
-      <li><h4>Posts<h4></li>
     </ul>
   </div>
 
@@ -58,11 +58,10 @@
     <hr class="hr">
     <% end %>
     <% @posts.each do |post| %>
-      <%# <%= current_user.username %> %>
-      <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" id="post-avatar" alt="avatar"><h6>User</h6>
+      <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" id="post-avatar" alt="avatar"><h6><%= current_user.username.capitalize %></h6>
       <% if post.photo %>
         <h5><%= post.content %></h5>
-        <%= image_tag(post.photo, class: "post-img") %>
+        <%# <%= image_tag(post.photo, class: "post-img") %>
       <% elsif post.video %>
         <p><%= post.content %></p>
         <%= video_tag(post.video) %>

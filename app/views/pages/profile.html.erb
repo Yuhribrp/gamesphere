@@ -10,8 +10,9 @@
                 <div class="mt-3">
                   <h3><%= @user.username %><h3>
                   <h5 class="mb-1 font-size-md p-2"></h5>
-                  <%= link_to "Find a Community", communities_path, class: "btn btn-outline-primary" %>
-                  <%= link_to "All My Friends", "#", class: "btn btn-outline-primary" %>
+                  <%= link_to "Edit Profile", edit_user_path, class: "btn btn-outline-primary" %>
+                  <%= link_to "Communities", communities_path, class: "btn btn-outline-primary" %>
+                  <%= link_to "My Friends", "#", class: "btn btn-outline-primary" %>
                 </div>
               </div>
             </div>
@@ -42,10 +43,10 @@
             <div class="card-user-profile-info">
               <div class="row">
                 <div class="col-sm-3">
-                  <h5 class="mb-0">Name :</h5>
+                  <h5 class="mb-0">Username :</h5>
                 </div>
                 <div class="col-sm-9 text-primary">
-                  <%= @user.username %>
+                  <%= @user.full_name%>
                 </div>
               </div>
               <hr>
@@ -71,6 +72,15 @@
                 </div>
               </div>
               <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h5 class="mb-0">Age :</h5>
+                </div>
+                <div class="col-sm-9 text-primary">
+                  <%= @user.age%>
+                </div>
+              </div>
+              <hr>
               <%# <div class="row">
                 <div class="col-sm-12">
                   <a class="btn btn-info " target="__blank" href="#">Edit</a>
@@ -87,29 +97,33 @@
               <h5 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Player Status</i></h5>
               <small>Communicability</small>
               <div class="progress mb-3" style="height: 5px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.communicability * 2 * 10 %>%" aria-valuenow="<%= @evaluation.communicability * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-primary" role="progressbar"  aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <small>Tilt Resistance</small>
               <div class="progress mb-3" style="height: 5px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.tilt_resistance * 2 * 10 %>%" aria-valuenow="<%= @evaluation.tilt_resistance * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-primary" role="progressbar"  aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <small>Manners</small>
               <div class="progress mb-3" style="height: 5px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.manners * 2 * 10 %>%" aria-valuenow="<%= @evaluation.manners * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-primary" role="progressbar"  aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <small>Sociability</small>
               <div class="progress mb-3" style="height: 5px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.sociability * 2 * 10 %>%" aria-valuenow="<%= @evaluation.sociability * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-primary" role="progressbar"  aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <small>leadership</small>
               <div class="progress mb-3" style="height: 5px">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: <%= @evaluation.leadership * 2 * 10 %>%" aria-valuenow="<%= @evaluation.leadership * 2 * 10 %>" aria-valuemin="0" aria-valuemax="100"></div>   
+                <div class="progress-bar bg-primary" role="progressbar"  aria-valuemin="0" aria-valuemax="100"></div>   
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="profile-features">
+          <h3>My Communities</h3>
+        <%# <div class="Matches-profile">
+          <h3>My Matches</h3>
+        </div> %>
       </div>
     </div>
   </div>

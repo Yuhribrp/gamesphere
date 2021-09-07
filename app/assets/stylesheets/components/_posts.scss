@@ -18,6 +18,12 @@
     font-family: 'Fira Mono', monospace!important;
     color:white;
     text-shadow: 0px 0px 10px whitesmoke;
+    margin-left: 2rem;
+    text-decoration: none;
+  }
+
+  :hover {
+    text-decoration: none;
   }
 }
 
@@ -38,11 +44,20 @@
 
   h5 {
     word-break: break-all;
-    margin-bottom: 5rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
     // color:white;
     // text-shadow: 0px 0px 10px whitesmoke;
   }
 
+<<<<<<< HEAD
+=======
+  small {
+    display: flex;
+    justify-content: right;
+  }
+
+>>>>>>> 26b24a8e26c3cb05c308d1b0bb541e4d6937c947
   h6 {
     margin-top: 1rem;
     position:relative;
