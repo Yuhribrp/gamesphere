@@ -1,14 +1,15 @@
 <div>
   <h1>Matches</h1>
 </div>
-
+<%= current_user.username %>
+<%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill %>
 <div>
   <% if @player_one != @player_two %>
     <div class="match-card avatar-large">
       <%= current_user.username %>
-      <% cl_image_tag(current_user.photo.key) %>
+      <%= cl_image_tag @player_one.photo.key, height: 300, width: 400, crop: :fill %>
       <%= @player_two.username %>
-      <% image_tag(@player_two.photo) %>
+      <%= cl_image_tag @player_two.photo.key, height: 300, width: 400, crop: :fill %>
     </div>
   <% else %>
     <div class="match-card">

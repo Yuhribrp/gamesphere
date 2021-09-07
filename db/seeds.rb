@@ -60,7 +60,11 @@ league_of_legends = Community.create!(
 puts "------------- Seeding communities completed -------------------"
 
 
+
+puts "_______________________ Seeding User _________________________"
+=======
 # puts "_______________________ Seeding User _________________________"
+
 # ju = User.new(email: "ju@lewagon.com", password: "123456", username: "Juquinha")
 # ju.save
 
@@ -80,6 +84,7 @@ puts "------------- Seeding users -------------------"
 
 # require "open-uri"
 
+
 # file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/Avatar-6-1_a3jpsm.jpg')
 # player_one = User.new(email: "player_one@icloud.com",
 #   password: "abc123",
@@ -89,6 +94,7 @@ puts "------------- Seeding users -------------------"
 #   location: "Ohio",
 #   age: 27,)
 # player_one.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
 
 # player_two = User.new(
 #   email: "player_two@icloud.com",
@@ -103,6 +109,7 @@ puts "------------- Seeding users -------------------"
 
 # player_two.save!
 
+
 # file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/image_spjcwq.jpg')
 # player_two = User.new(email: "player_two@icloud.com",
 #   password: "abc123",
@@ -113,10 +120,15 @@ puts "------------- Seeding users -------------------"
 #   age: 27,)
 # player_two.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
+
 # players = []
 # evaluations = []
 
+
+# 2.times do
+=======
 # 25.times do
+
 #   players << User.new(
 #     email: Faker::Internet.email,
 #     # password: Faker::Alphanumeric.alphanumeric(number: 10),
@@ -125,7 +137,11 @@ puts "------------- Seeding users -------------------"
 #     full_name: Faker::Name.unique.name,
 #     language: Faker::Nation.language,
 #     location: Faker::Nation.capital_city,
+
+#     age: rand(1..50)
+=======
 #     age: rand(1..135)
+
 #   )
 #   players.last.save!
 #   puts "...added #{players.last.username}, #{players.last.full_name}"
