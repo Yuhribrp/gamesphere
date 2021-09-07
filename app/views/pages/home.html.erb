@@ -14,15 +14,21 @@
     </div>
     <div class="about-icons">
       <div class="join-icon">
-      <i class="fas fa-gamepad"></i><h3>Join a community of players that can improve your game experience.<h3>
+        <%= link_to("communities") do %>
+          <i class="fas fa-gamepad"></i><h3>Join a community of players that can improve your game experience.<h3>
+        <% end %>
       </div>
       <div class="match-icon">
-      <i class="fas fa-user-friends"></i><h3>Match with players that have the same ranks and levels as you do!</h3>
+        <%= link_to("/users/sign_in") do %>
+          <i class="fas fa-user-friends"></i><h3>Match with players that have the same ranks and levels as you do!</h3>
+        <% end %>
       </div>
       <div class="chat-icon">
-      <i class="fas fa-network-wired"></i><h3>Chat, find players and become active in your favorite game communities.</h3>
+        <%= link_to("/users/sign_in") do %>
+          <i class="fas fa-network-wired"></i><h3>Chat, find players and become active in your favorite game communities.</h3>
+        <% end %>
       </div>
-    </div>    
+    </div>
     <div class="cards-container">
       <div class="cards">
         <div class="card-lol">
@@ -31,7 +37,9 @@
             <span></span>
             <span></span>
             <span></span>
-            JOIN
+            <%= link_to("communities/}") do %>
+              JOIN
+            <% end %>
           </a>
         </div>
 
@@ -41,7 +49,9 @@
             <span></span>
             <span></span>
             <span></span>
-            JOIN
+            <%= link_to("communities/") do %>
+              JOIN
+            <% end %>
           </a>
         </div>
 
@@ -51,7 +61,9 @@
             <span></span>
             <span></span>
             <span></span>
-            JOIN
+            <%= link_to("communities/29") do %>
+              JOIN
+            <% end %>
           </a>
         </div>
 
@@ -61,7 +73,9 @@
             <span></span>
             <span></span>
             <span></span>
-            JOIN
+            <%= link_to("communities/30") do %>
+              JOIN
+            <% end %>
           </a>
         </div>
 
@@ -71,7 +85,9 @@
             <span></span>
             <span></span>
             <span></span>
-            JOIN
+            <%= link_to("communities/31") do %>
+              JOIN
+            <% end %>
           </a>
         </div>
 
@@ -81,10 +97,12 @@
             <span></span>
             <span></span>
             <span></span>
-            JOIN
+            <%= link_to("communities/32") do %>
+              JOIN
+            <% end %>
           </a>
         </div>
-      
+
       </div>
     </div>
 
@@ -102,7 +120,7 @@
           <p>Brasil</p>
           <p class="company-email">gamersphere@support.com</p>
         </div>
-        
+
         <div class="col">
           <h3>Links <div class="underline"><span></span></div></h3>
           <ul>
