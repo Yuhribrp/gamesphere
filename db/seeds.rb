@@ -87,7 +87,7 @@ player_one = User.new(email: "player_one@icloud.com",
   full_name: "Wade Watts",
   language: "english",
   location: "Ohio",
-  age: 27)
+  age: 27,)
 player_one.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 # player_two = User.new(
@@ -104,16 +104,14 @@ player_one.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg'
 # player_two.save!
 
 file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/image_spjcwq.jpg')
-player_two = User.new(
-  email: "player_two@icloud.com",
+player_two = User.new(email: "player_two@icloud.com",
   password: "abc123",
   username: "juquinha",
   full_name: "Pinkman",
   language: "english",
   location: "Ohio",
-  age: 27)
-  player_two.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
-  puts "::player_two.photo:: #{player_two.photo}"
+  age: 27,)
+player_two.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 players = []
 evaluations = []
