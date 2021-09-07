@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'cgi'
+require 'digest'
 
 # communities
 puts "---------------Seeding Communities Started---------------"
@@ -131,7 +132,14 @@ evaluations = []
   )
   players.last.save!
   puts "...added #{players.last.username}, #{players.last.full_name}"
-
+  puts "...psmd5::#{players.last.email}"
+  puts "...psmd5::......calculating md5"
+  pmd5 = Digest::MD5.hexdigest "#{players.last.email}"      #=> "90015098..."
+  puts "...psmd5::pmd5...:#{pmd5}"
+  puts "...psmd5::.......fetching gravatar @:"
+  # ps_img = cl_image_tag("#{pmd5}.jpg", type: "gravatar")
+  ps_img = "https://res.cloudinary.com/demo/image/gravatar/#{pmd5}.jpg"
+  puts "...psmd5::ps_img...: #{ps_img}"
 
   rand(3..10).times do
     puts "-----seeding evals------"
@@ -154,6 +162,34 @@ evaluations = []
       ht: #{evaluations.last.hotness} "
   end
 end
+
+
+
+players << User.new(
+  email: "techbiotic@icloud.com",
+  password: "abc123",
+  username: "techbiotic",
+  full_name: "Justin Knox",
+  language: "english",
+  location: "Los Angeles",
+  age: 37)
+players.last.save!
+
+jmd5 = Digest::MD5.hexdigest "#{players.last.email}"      #=> "90015098..."
+puts "...jsmd5::jmd5...:#{jmd5}"
+
+file = URI.open("https://res.cloudinary.com/demo/image/gravatar/#{jmd5}.jpg")
+
+# article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+players.last.photo.attach(io: file, filename: 'image_justin.jpg', content_type: 'image/jpg')
+
+puts "::justin.photo:: #{players.last.photo}"
+
+
+
+
+
+
 puts "------------- Seeding users completed -------------------"
 
 
