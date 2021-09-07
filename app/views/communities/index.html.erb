@@ -76,11 +76,11 @@
 
         <% @communities.each do |community| %>
         <div class="card-seed">
-            <h3> <%= community.title %> </h3>
             <%= link_to("communities/#{community.id}/posts") do %>
               <img src="<%= community.img_url %>" class="cmt-image-seed">
             <% end %>
 
+            <h3> <%= community.title %> </h3>
             <span></span>
             <span></span>
             <span></span>
