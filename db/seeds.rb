@@ -8,16 +8,17 @@
 
 require 'cgi'
 
-# communities
-puts "---------------Seeding Communities Started---------------"
-
 Post.delete_all
 Community.delete_all
 Evaluation.destroy_all
 User.delete_all
 
+# communities
+puts "---------------Seeding Communities Started---------------"
+
 # homepage groups
-league_of_legends = Community.create!(
+
+Community.create!(
   title: "League of Legends",
   img_url: "http://localhost:3000/assets/mf.jpg"
 )
@@ -46,7 +47,6 @@ league_of_legends = Community.create!(
 #   img_url: "https://img.ibxk.com.br/2015/06/15/15150935995121.jpg?w=1120&h=420&mode=crop&scale=both"
 # )
 
-
 # Faker::Game.title
 # 25.times do
 #   Community.create!(title: Faker::Game.title)
@@ -70,24 +70,28 @@ puts "------------- Seeding users -------------------"
 require "open-uri"
 
 file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/Avatar-6-1_a3jpsm.jpg')
-player_one = User.new(email: "player_one@icloud.com",
+player_one = User.new(
+  email: "player_one@icloud.com",
   password: "abc123",
   username: "parzival",
   full_name: "Wade Watts",
   language: "english",
   location: "Ohio",
-  age: 27)
+  age: 27
+)
 player_one.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 player_one.save
 
 file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/image_spjcwq.jpg')
-player_two = User.new(email: "player_two@icloud.com",
+player_two = User.new(
+  email: "player_two@icloud.com",
   password: "abc123",
   username: "juquinha",
   full_name: "Pinkman",
   language: "english",
   location: "Ohio",
-  age: 27)
+  age: 27
+)
 player_two.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 player_two.save
 # players = []

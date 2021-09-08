@@ -1,6 +1,6 @@
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -20,7 +20,7 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
 
 <div class="main-card card-banner" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("mf.jpg")'>
   <h1 class="list-title"><%= @community.title %></h1>
@@ -81,11 +81,9 @@
   <div class="stuffs">
     <!-- Button trigger modal -->
     <div>
-      <button type="button" href="#" class="match-btn" data-toggle="modal" data-target="#exampleModal">FIND MATCH</button>
+      <%# <button type="button" href="" class="match-btn" data-toggle="modal" data-target="#exampleModal">FIND MATCH</button> %>
+      <%= link_to "FIND MATCH", community_matches_path(@community), method: :post, class:"match-btn" %>
     </div>
-
-
-
 
       <div class="cmt-feature">
         <h4>Members</h4>
@@ -102,6 +100,7 @@
         <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" id="post-avatar" alt="avatar">
         <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar" id="post-avatar" alt="avatar">
       </div>
+
       <div class="cmt-feature2">
       </div>
   </div>

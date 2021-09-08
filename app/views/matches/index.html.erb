@@ -1,21 +1,24 @@
 <div class="match-h1">
   <h1>Matches</h1>
-
-  <% if @player_one != @player_two %>
-    <div class="match-card">
-      <div class="match-avatar">
-        <%= cl_image_tag @player_one.photo.key, height: 200, width: 200, crop: :fill %>
-        <%= current_user.username %>
-      </div>
-      <div class="match-avatar">
-        <%= cl_image_tag @player_two.photo.key, height: 200, width: 200, crop: :fill %>
-        <%= @player_two.username %>
-      </div>
-    </div>
-  <% else %>
-    <div class="match-card">
-      <h2>No new matches for now</h2>
-      <%= link_to "Back to communities", communities_path, class: "btn btn-secondary" %>
-    </div>
-  <% end %>
 </div>
+<% if @player_one != @player_two %>
+  <div class="match-card">
+    <div class="match-avatar">
+      <%= cl_image_tag @player_one.photo.key, :class => "img-preview" %>
+      <%= current_user.username %>
+    </div>
+    <div class="match-avatar">
+      <%= cl_image_tag @player_two.photo.key, :class => "img-preview", crop: :fill %>
+      <%= @player_two.username %>
+    </div>
+  </div>
+<% else %>
+  <div class="match-card">
+    <h2>No new matches for now</h2>
+    <%= link_to "Back to communities", communities_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>
+
+<% @matches.each do |match| %>
+<%= match.user_one.username %>
+<% end  %>
