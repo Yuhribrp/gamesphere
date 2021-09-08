@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gamesphere</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,10 +9,16 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
+    <title>
+      <%= if content_for?(:title) then yield(:title) + ' | ' end %>
+    .:.GameSphere.:.
+    </title>
   </head>
 
   <body>
     <%= favicon_link_tag asset_path('favicon.png'), :rel => 'icon', :type =>  'image/png' %>
+
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
