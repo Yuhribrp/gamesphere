@@ -5,8 +5,8 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all.order(created_at: :desc)
     @community = Community.find(params[:community_id])
+    @posts = Post.where(community: @community).order(created_at: :desc)
     @post = Post.new
   end
 
@@ -25,8 +25,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
     @post.destroy
-    redirect_to :action => "index", :id => @community
+    redirect_to community_posts_path(@post.community)
   end
 
   def match
