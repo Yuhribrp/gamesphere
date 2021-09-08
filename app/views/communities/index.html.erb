@@ -1,4 +1,4 @@
- <div class="communities-index"> 
+ <div class="communities-index">
   <div class="communities-info">
     <h2>Find and Join Your Favorite Gaming Communities</h2>
   </div>
@@ -14,7 +14,7 @@
   </div>
   <div class="cmt-cards-container">
       <div class="cmt-cards">
-        <div class="card-lol">
+        <%# <div class="card-lol">
           <h3> League of Legends </h3>
           <a href="#">
             <span></span>
@@ -72,18 +72,19 @@
             <span></span>
             JOIN
           </a>
-        </div>
+        </div> %>
 
         <% @communities.each do |community| %>
-        <div class="card-seed">
-          <h4> <%= community.title %> </h4>
-          <img src="<%= community.img_url%>" class="cmt-image-seed">
-                    <%# <a href="#">
+          <div class="card-seed">
+            <h4> <%= community.title %> </h4>
+              <%= link_to("communities/#{community.id}/posts") do %>
+                <img src="<%= community.img_url %>" class="cmt-image-seed">
+              <% end %>
             <span></span>
             <span></span>
             <span></span>
             JOIN
-          </a> %>
+          </a>
         </div>
         <% end %>
       </div>
