@@ -4,5 +4,5 @@ class Membership < ApplicationRecord
   belongs_to :community
 
   # validates :user, uniqueness: { scope: :community}
-  validates_uniqueness_of :community_id, scope: [:user_id]
+  validates :user_id, uniqueness: { scope: :community_id }
 end
