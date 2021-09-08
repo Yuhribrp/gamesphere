@@ -7,10 +7,12 @@ Rails.application.routes.draw do
   #   resources :friendship, only: [:create]
   # end
 
-  resources :communities, only: [:index, :show, :searches] do
-    resources :posts, only: [:index, :new, :create]
-    resources :matches, only: [:index, :create]
+  resources :communities, only: %i[index show searches] do
+    resources :posts, only: %i[index new create]
+    resources :matches, only: %i[index create]
   end
-  resources :users, only: [:edit, :update]
+  resources :users, only: %i[edit update] do
+    resources :evaluations, only: %i[show create]
+  end
   get '/profile/:id', to: 'pages#profile', as: 'profile'
 end
