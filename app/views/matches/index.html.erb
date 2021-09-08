@@ -18,3 +18,7 @@
     <%= link_to "Back to communities", communities_path, class: "btn btn-secondary" %>
   </div>
 <% end %>
+
+<% @matches.each do |match| %>
+<%= match.user_one.username %>
+<% end  %>
