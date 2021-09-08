@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   resources :communities, only: [:index, :show, :searches] do
     resources :posts, only: [:index, :new, :create]
     resources :matches, only: [:index, :create]
+    post 'join', to: 'memberships#join' , as: 'member'
   end
   resources :users, only: [:edit, :update]
   get '/profile/:id', to: 'pages#profile', as: 'profile'
+  resources :posts, only: [:destroy]
 end

@@ -24,6 +24,9 @@
 
 <div class="main-card card-banner" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("mf.jpg")'>
   <h1 class="list-title"><%= @community.title %></h1>
+  <div class="join-button">
+   <%= link_to "Join Community", community_member_path, method: :post, class: "btn btn-outline-secondary" %>
+  </div>
 </div>
     <div class="league-main">
     </div>
@@ -68,6 +71,7 @@
       <% else %>
         <h5><%= post.content %></h5>
       <% end %>
+      <%= link_to "Delete", post_path(post), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
       <small><%= Time.now %></small>
        <%# <small class="text-right flex-shrink-0"><%= link_to 'delete', community_posts_path(post), method: :delete, data: { confirm: "Are you sure you want to remove #{post}"}, class: 'text-danger' %>
     <hr class="hr">

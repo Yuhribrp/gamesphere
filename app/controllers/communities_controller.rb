@@ -13,6 +13,7 @@ class CommunitiesController < ApplicationController
       @communities = Community.all
     end
   end
+
   # def posts
   #   @community = Community.find[params[:id]]
   #   @post = Post.new
