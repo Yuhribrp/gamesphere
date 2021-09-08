@@ -28,7 +28,7 @@
     10px 0 60px rgb(95, 218, 255);
 	animation: spin 4s infinite linear;
 
-  
+
 }
 @keyframes spin{
 	15%{transform: translateX(-25px) translateY(-35px);
@@ -63,7 +63,7 @@
 }
 
 .match-btn {
-  // padding-top: 4rem;
+  padding-top: 5rem;
   // position: relative;
   // bottom: 220px;
   // left: 900px;
@@ -96,7 +96,7 @@
     10px 0 60px rgb(95, 218, 255);
 	// animation: spin 4s infinite linear;
 
-  
+
 }
 @keyframes spin{
 	15%{transform: translateX(-25px) translateY(-35px);
@@ -118,7 +118,7 @@
   // letter-spacing: 0.02rem;
   // border: none;
 	// transform: translateY(-5px);
-  
+
   box-shadow:
   inset 0 0 50px #fff,
   inset 20px 0 60px #64DFDF,
@@ -127,7 +127,7 @@
   inset -20px 0 300px #64DFDF,
     0 0 30px #fff,
     -10px 0 60px #64DFDF,
-    10px 0 60px rgb(210, 113, 255);    
+    10px 0 60px rgb(210, 113, 255);
 }
 
 .match-btn:hover{
