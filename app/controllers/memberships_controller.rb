@@ -6,13 +6,14 @@ class MembershipsController < ApplicationController
     @community = Community.find(params[:community_id])
     @member = current_user
     @membership = Membership.new(user: @member, community: @community)
-    if @membership.save
+    begin
+      @membership.save
       redirect_to community_posts_path(@community)
       flash[:notice] = "Welcome to '#{@community.title}' Community"
-    else
-      redirect_to community_posts_path(@community)
-      flash[:notice] = "Not Able to Join"
-    end    
+     rescue ActiveRecord::RecordNotUnique => e
+        redirect_to communities_path
+        flash[:notice] = "#{current_user.username.capitalize} already belongs to #{@community.title} Community"
+     end
   end
 
   # def create
