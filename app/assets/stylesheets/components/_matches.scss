@@ -14,14 +14,13 @@
 
 .match-card {
   border: 2px solid rgb(240, 201, 255);
-  box-shadow: 2px 2px 10px rgb(240, 201, 255);
+  box-shadow: 2px 2px 10px rgba(240, 201, 255, 0.24);
   border-radius: 12px;
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
   margin: 0 400px;
-  background-color: blueviolet;
-
+  background-color: rgba(137, 43, 226, 0.288);
 }
 
 .match-avatar {
