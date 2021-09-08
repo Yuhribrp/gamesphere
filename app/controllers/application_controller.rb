@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-
   # before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -8,11 +7,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
 
     # For additional in app/views/devise/registrations/edit.html.erb
-    devise_parameter_sanitizer.permit(:account_update, keys: [:full_name, :location, :age, :photo, :language])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[full_name location age photo language])
   end
 
   def title(text)
     content_for :title, text
   end
-  
 end
