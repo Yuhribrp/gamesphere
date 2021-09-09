@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "GameSphere"
+meta_title: "The Galaxy's Greatest Gaming Community"
+meta_description: "A MetaGaming Social Gaming Website"
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
+twitter_account: "@gamesphere_tweetz"   # required for Twitter Cards
