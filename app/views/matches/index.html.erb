@@ -4,8 +4,10 @@
 <% if @player_one != @player_two %>
   <div class="match-card">
     <div class="match-avatar">
-      <%= cl_image_tag @player_one.photo.key, :class => "img-preview" %>
+      <%= cl_image_tag @player_one.photo.key , :class => "img-preview" %>
+      <%# <%= link_to @player_one.photo, profile_path(@player_one), class:"img-preview" %> %>
       <%= current_user.username %>
+      <%# <%= @match.created_at %> %>
     </div>
     <div class="match-avatar">
       <%= cl_image_tag @player_two.photo.key, :class => "img-preview", crop: :fill %>
@@ -14,11 +16,19 @@
   </div>
 <% else %>
   <div class="match-card">
-    <h2>No new matches for now</h2>
+    <h2 class="match-h1">No new matches for now</h2>
     <%= link_to "Back to communities", communities_path, class: "btn btn-secondary" %>
   </div>
 <% end %>
 
+<h2 class="match-h1">Latests matches...</h2>
 <% @matches.each do |match| %>
-<%= match.user_one.username %>
-<% end  %>
+  <div class="match-card">
+  <div class="match-avatar">
+    <%= cl_image_tag match.user_one.photo.key, :class => "img-preview" %>
+    <%= match.user_one.username %>
+    <%= cl_image_tag match.user_two.photo.key, :class => "img-preview" %>
+    <%= match.user_two.username %>
+  </div>
+  </div>
+<% end %>

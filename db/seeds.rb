@@ -59,12 +59,6 @@ Community.create!(
 # end
 puts "------------- Seeding communities completed -------------------"
 
-puts "_______________________ Seeding User _________________________"
-# puts "_______________________ Seeding User _________________________"
-
-# ju = User.new(email: "ju@lewagon.com", password: "123456", username: "Juquinha")
-# ju.save
-
 puts "------------- Seeding users -------------------"
 
 require "open-uri"
@@ -94,6 +88,8 @@ player_two = User.new(
 )
 player_two.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 player_two.save
+
+puts "------------- Seeding users completed -------------------"
 # players = []
 # evaluations = []
 

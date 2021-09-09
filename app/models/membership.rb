@@ -1,5 +1,6 @@
 class Membership < ApplicationRecord
   attr_accessor :user_id, :community_id
+
   belongs_to :user
   belongs_to :community
 

@@ -2,8 +2,7 @@ class Community < ApplicationRecord
   has_many :posts
   has_many :users, through: :memberships
   has_many :memberships, dependent: :destroy
-  
-  validates :user_id, uniqueness: true
+  # validates :user_id, uniqueness: true
   include PgSearch::Model
   pg_search_scope :search_by_title,
                   against: [:title],
@@ -18,5 +17,4 @@ class Community < ApplicationRecord
       Community.all
     end.sorted
   end
-
 end
