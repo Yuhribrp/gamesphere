@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'cgi'
+require "open-uri"
 
 Post.delete_all
 Community.delete_all
@@ -17,35 +18,36 @@ User.delete_all
 puts "---------------Seeding Communities Started---------------"
 
 # homepage groups
-
+puts "::c.c: lol.."
 Community.create!(
   title: "League of Legends",
   img_url: "http://localhost:3000/assets/mf.jpg"
 )
-# dota_2 = Community.create!(
-#   title: "DOTA 2",
-#   img_url:"http://localhost:3000/assets/ember.jpg"
-# )
-# fortnite = Community.create!(
-#   title: "Fortnite",
-#   img_url: "http://localhost:3000/assets/fortnite3.jpg"
-# )
-# valorant = Community.create!(
-#   title: "Valorant",
-#   img_url: "http://localhost:3000/assets/valorant.jpg"
-# )
-# gta_v = Community.create!(
-#   title: "Grand Theft Auto V",
-#   img_url: "http://localhost:3000/assets/GTA.jpg"
-# )
-# wow = Community.create!(
-#   title: "World of Warcraft",
-#   img_url: "http://localhost:3000/assets/wow4.jpg"
-# )
-# mario = Community.create!(
-#   title: "Super Mario Bros 3",
-#   img_url: "https://img.ibxk.com.br/2015/06/15/15150935995121.jpg?w=1120&h=420&mode=crop&scale=both"
-# )
+dota_2 = Community.create!(
+  title: "DOTA 2",
+  img_url:"http://localhost:3000/assets/ember.jpg"
+)
+fortnite = Community.create!(
+  title: "Fortnite",
+  img_url: "http://localhost:3000/assets/fortnite3.jpg"
+)
+valorant = Community.create!(
+  title: "Valorant",
+  img_url: "http://localhost:3000/assets/valorant.jpg"
+)
+gta_v = Community.create!(
+  title: "Grand Theft Auto V",
+  img_url: "http://localhost:3000/assets/GTA.jpg"
+)
+wow = Community.create!(
+  title: "World of Warcraft",
+  img_url: "http://localhost:3000/assets/wow4.jpg"
+)
+mario = Community.create!(
+  title: "Super Mario Bros 3",
+  img_url: "https://img.ibxk.com.br/2015/06/15/15150935995121.jpg?w=1120&h=420&mode=crop&scale=both"
+)
+puts "::c.c: got.o1."
 
 # Faker::Game.title
 # 25.times do
@@ -61,7 +63,6 @@ puts "------------- Seeding communities completed -------------------"
 
 puts "------------- Seeding users -------------------"
 
-require "open-uri"
 
 file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/Avatar-6-1_a3jpsm.jpg')
 player_one = User.new(
