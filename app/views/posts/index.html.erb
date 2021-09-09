@@ -88,8 +88,9 @@
       <div class="cmt-feature">
         <h4>Members</h4>
         <% @community.memberships.each do |membership| %>
-        <%= image_tag(membership.user.avatar_thumbnail, class: "avatar", id: "post-avatar", alt: "avatar")%>
+        <%= link_to image_tag(membership.user.avatar_thumbnail, class: "avatar", id: "post-avatar", alt: "avatar"), profile_path(membership.user) %>
         <%# <small><%= membership.user.username.capitalize %>
+        
         <% end %>
       </div>
 
