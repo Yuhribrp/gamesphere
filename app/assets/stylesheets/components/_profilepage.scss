@@ -182,8 +182,8 @@
 }
 
 .profile-features {
-  display: flex;
-  justify-content: space-around;
+  // display: flex;
+  // justify-content: space-around;
   position:absolute;
   top:0;
   right: 0;
@@ -191,16 +191,17 @@
   margin-right: -12rem;
   color: white;
   border: 2px solid white;
-  width: 25rem;
+  width: 28rem;
   height: 55rem;
   text-align: center;
   box-shadow: 0 0 10px whitesmoke;
   border-radius: 12px;
 
-  h3 {
-    margin-top: 1rem;
+  h2 {
+    
     color: white;
     text-shadow: 0 0 10px whitesmoke;
+    font-family: 'Fira Mono', monospace;
   }
 }
 

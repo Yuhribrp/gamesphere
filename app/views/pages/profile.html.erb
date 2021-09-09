@@ -120,10 +120,24 @@
         </div>
       </div>
       <div class="profile-features">
-          <h3>My Communities</h3>
+
         <%# <div class="Matches-profile">
           <h3>My Matches</h3>
         </div> %>
+        <h2>My Communities</h2>
+        <hr>
+        <div class="profile-cards-container">
+          <div class="profile-cards">
+            <% @user.memberships.each do |membership| %>
+              <div> <%= link_to image_tag(membership.community.img_url, class: "card-cmt-profile"), community_posts_path(membership.community) %>
+                <h3> <%= membership.community.title %> </h3>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        
+        <%# <div class="card-cmt-profile" style="background-image:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('<%=membership.community.img_url%>
+
       </div>
     </div>
   </div>

@@ -186,12 +186,13 @@ textarea {
   color: white;
   border: 2px solid white;
   width: 25rem;
-  height: 25rem;
-  text-align: center;
+  height: 45rem;
+  // text-align: center;
   box-shadow: 0 0 10px whitesmoke;
   border-radius: 12px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
 
   h4 {
     position:absolute;
@@ -200,23 +201,22 @@ textarea {
     margin-top: 2.5rem;
   }
 }
-
-.cmt-feature2 {
+// .cmt-feature2 {
   // display: flex;
   // justify-content: flex-end;
   // position:absolute;
   // top:0;
   // right: 0;
-  margin-top: 3rem;
-  margin-left: 3.7rem;
-  color: white;
-  border: 2px solid white;
-  width: 25rem;
-  height: 25rem;
-  text-align: center;
-  box-shadow: 0 0 10px whitesmoke;
-  border-radius: 12px;
-}
+//   margin-top: 3rem;
+//   margin-left: 3.7rem;
+//   color: white;
+//   border: 2px solid white;
+//   width: 25rem;
+//   height: 25rem;
+//   text-align: center;
+//   box-shadow: 0 0 10px whitesmoke;
+//   border-radius: 12px;
+// }
 
 .main-league {
   width: 100%;
