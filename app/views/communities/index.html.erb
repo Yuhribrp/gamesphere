@@ -14,77 +14,13 @@
   </div>
   <div class="cmt-cards-container">
       <div class="cmt-cards">
-        <%# <div class="card-lol">
-          <h3> League of Legends </h3>
-          <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            JOIN
-          </a>
-        </div>
-
-        <div class="card-dota">
-          <h3> Dota 2 </h3>
-                    <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            JOIN
-          </a>
-        </div>
-
-        <div class="card-fortnite">
-          <h3> Fortnite </h3>
-                    <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            JOIN
-          </a>
-        </div>
-
-        <div class="card-valorant">
-          <h3> Valorant </h3>
-                    <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            JOIN
-          </a>
-        </div>
-
-        <div class="card-gta">
-          <h3> Grand Theft Auto V </h3>
-                    <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            JOIN
-          </a>
-        </div>
-
-        <div class="card-wow">
-          <h3> World of Warcraft </h3>
-                    <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            JOIN
-          </a>
-        </div> %>
-
         <% @communities.each do |community| %>
-          <div class="card-seed">
-            <h4> <%= community.title %> </h4>
-              <%= link_to("communities/#{community.id}/posts") do %>
-                <img src="<%= community.img_url %>" class="cmt-image-seed">
-              <% end %>
+          <div class="card-seed" style="background-image:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('<%=community.img_url%>')">
+            <h3> <%= community.title %> </h3>
+              <%= link_to "Join", ("communities/#{community.id}/posts"), class: "a" %>
             <span></span>
             <span></span>
             <span></span>
-            JOIN
-          </a>
         </div>
         <% end %>
       </div>
