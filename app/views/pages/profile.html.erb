@@ -6,7 +6,7 @@
           <div class="card-user-profile">
             <div class="card-user-profile-body">
               <div class="d-flex flex-column align-items-center text-center">
-                <img src="https://kitt.lewagon.com/placeholder/users/arthur-littm" alt="Admin" class="rounded-circle" width="150">
+                <%= image_tag(current_user.avatar_thumbnail, class: "rounded-circle", width: 150)%>
                 <div class="mt-3">
                   <h3><%= @user.username %><h3>
                   <h5 class="mb-1 font-size-md p-2"></h5>
