@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'cgi'
+# require 'cgi'
 
 Post.delete_all
 Community.delete_all
@@ -17,7 +17,6 @@ User.delete_all
 puts "---------------Seeding Communities Started---------------"
 
 # homepage groups
-
 Community.create!(
   title: "League of Legends",
   img_url: "http://localhost:3000/assets/mf.jpg"
