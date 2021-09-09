@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_06_191611) do
+ActiveRecord::Schema.define(version: 2021_09_08_185452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,11 +84,13 @@ ActiveRecord::Schema.define(version: 2021_09_06_191611) do
   end
 
   create_table "matches", force: :cascade do |t|
-    t.integer "user_one"
-    t.integer "user_two"
+    t.bigint "user_one_id", null: false
+    t.bigint "user_two_id", null: false
     t.float "matching_score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_one_id"], name: "index_matches_on_user_one_id"
+    t.index ["user_two_id"], name: "index_matches_on_user_two_id"
   end
 
   create_table "memberships", force: :cascade do |t|
@@ -97,6 +99,7 @@ ActiveRecord::Schema.define(version: 2021_09_06_191611) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["community_id"], name: "index_memberships_on_community_id"
+    t.index ["user_id", "community_id"], name: "index_memberships_on_user_id_and_community_id", unique: true
     t.index ["user_id"], name: "index_memberships_on_user_id"
   end
 
@@ -135,6 +138,8 @@ ActiveRecord::Schema.define(version: 2021_09_06_191611) do
   add_foreign_key "comments", "posts"
   add_foreign_key "evaluations", "users"
   add_foreign_key "gametags", "users"
+  add_foreign_key "matches", "users", column: "user_one_id"
+  add_foreign_key "matches", "users", column: "user_two_id"
   add_foreign_key "memberships", "communities"
   add_foreign_key "memberships", "users"
   add_foreign_key "posts", "communities"

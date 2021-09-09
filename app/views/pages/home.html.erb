@@ -30,15 +30,14 @@
     <div class="cards-container">
       <div class="cards">
         <div class="card-lol">
-          <%= link_to("communities/1/posts") do %>
             <h3> League of Legends </h3>
-          <% end %>
-          <a href="#">
+          <a <%= link_to("communities/1/posts") do %>
             <span></span>
             <span></span>
             <span></span>
             JOIN
           </a>
+          <% end %>
         </div>
 
         <div class="card-dota">

@@ -1,5 +1,5 @@
 .match-h1 {
-  font-size: 120px;
+  font-size: 180px;
   text-align: center;
   font-weight: bolder;
   margin: 0 auto;
@@ -9,24 +9,34 @@
   color: rgb(252, 252, 252);
   font-family: 'Prompt', sans-serif;
   color: #64DFDF;
-  padding: 130px;
+  padding: 130px 200px 50px 200px;
 }
-.match-card {
 
-  border: 3px solid #64dfcf;
+.match-card {
+  border: 2px solid rgb(240, 201, 255);
+  box-shadow: 2px 2px 10px rgba(240, 201, 255, 0.24);
   border-radius: 12px;
   display: flex;
   justify-content: space-evenly;
-  padding: 60px;
+  padding: 20px;
+  margin: 0 400px;
+  background-color: rgba(137, 43, 226, 0.288);
 }
 
 .match-avatar {
-  //width: 20px;
-  // height: auto;
-  // max-width: 100%;
-  // max-height: 100%;
+  //border: 3px solid #64dfcf ;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   color: rgb(252, 252, 252);
+  padding: 30px;
+  margin: auto;
 }
+
+.img-preview {
+  border-radius: 50%;
+  border: 2px solid #64dfcf;
+  box-shadow: 2px 2px 10px #64dfcf;
+  height: 230px;
+  width: 230px;
+  }
