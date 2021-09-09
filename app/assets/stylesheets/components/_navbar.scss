@@ -39,20 +39,18 @@
   letter-spacing: 0.1rem !important;
   position: relative;
   top:11px;
-  left:15px;
+  // left:15px;
 }  
 
 
 .dropdown-menu {
-  position: absolute;
-  top: 110%;
-  right: -3.5rem;
+  // position: absolute;
+  // top: 110%;
+  // right: -3.5rem;
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0.125rem 0 0;
+  min-width: 5rem;
   font-size: 1rem;
   color: none!important;
   text-align: center;
@@ -61,12 +59,12 @@
   background-clip: padding-box;
   border: none!important;
   border-radius: 12px;
-
+  
 }
 
 .dropdown-item {
   display: block;
-  width: 70%;
+  width: 100%;
   letter-spacing: 0.1rem;
   clear: both;
   font-weight: bolder;
@@ -77,4 +75,18 @@
   background-color: none!important;
   border: 0;
   border-radius: 12px;
+}
+
+.dropdown-menu-right {
+  right: -3.5rem;
+  left: auto;
+}
+
+.dropdown-menu.show {
+  display: block;
+  
+}
+
+.navbar-expand-sm .navbar-nav .dropdown-menu {
+  position: absolute;
 }
