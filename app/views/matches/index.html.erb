@@ -1,34 +1,60 @@
-<div class="match-h1">
-  <h1>Matches</h1>
-</div>
-<% if @player_one != @player_two %>
-  <div class="match-card">
-    <div class="match-avatar">
-      <%= cl_image_tag @player_one.photo.key , :class => "img-preview" %>
-      <%# <%= link_to @player_one.photo, profile_path(@player_one), class:"img-preview" %> %>
-      <%= current_user.username %>
-      <%# <%= @match.created_at %> %>
-    </div>
-    <div class="match-avatar">
-      <%= cl_image_tag @player_two.photo.key, :class => "img-preview", crop: :fill %>
-      <%= @player_two.username %>
-    </div>
-  </div>
-<% else %>
-  <div class="match-card">
-    <h2 class="match-h1">No new matches for now</h2>
-    <%= link_to "Back to communities", communities_path, class: "btn btn-secondary" %>
-  </div>
-<% end %>
+<div class="container-match">
 
-<h2 class="match-h1">Latests matches...</h2>
-<% @matches.each do |match| %>
-  <div class="match-card">
-  <div class="match-avatar">
-    <%= cl_image_tag match.user_one.photo.key, :class => "img-preview" %>
-    <%= match.user_one.username %>
-    <%= cl_image_tag match.user_two.photo.key, :class => "img-preview" %>
-    <%= match.user_two.username %>
+  <div class="match-h1">
+    <h1>Matches</h1>
   </div>
-  </div>
-<% end %>
+
+  <% if @player_one != @player_two %>
+    <div class="container-card-now">
+      <div class="match-card">
+        <div class="match-avatar">
+          <%= link_to profile_path(@player_one) do %>
+            <%= cl_image_tag @player_one.photo.key , :class => "img-preview" %>
+          <% end %>
+          <%= current_user.username %>
+        </div>
+        <div class="match-avatar">
+          <%= link_to profile_path(@player_two) do %>
+            <%= cl_image_tag @player_two.photo.key , :class => "img-preview", crop: :fill %>
+          <% end %>
+          <%= @player_two.username %>
+        </div>
+      </div>
+    </div>
+    <%= link_to "Back to communities", communities_path, class: "btn btn-secondary form-login btn" %>
+  <% else %>
+
+    <div class="no-match">
+      <h2 class="match-h2">No new matches for now</h2>
+      <%= link_to "Back to communities", communities_path, class: "btn btn-secondary form-login btn" %>
+    </div>
+
+  <% end %>
+
+  <h2 class="match-h2">Latest matches...</h2>
+
+  <% @matches.each do |match| %>
+    <div class="container-card">
+
+      <div class="match-card">
+        <div class="match-avatar">
+          <%= link_to profile_path(@player_one) do %>
+            <%= cl_image_tag @player_one.photo.key , :class => "img-preview" %>
+          <% end %>
+          <%= match.user_one.username %>
+        </div>
+
+        <div class="match-avatar">
+          <%= link_to profile_path(@player_two) do %>
+            <%= cl_image_tag @player_two.photo.key , :class => "img-preview", crop: :fill %>
+          <% end %>
+          <%= match.user_two.username %>
+        </div>
+      </div>
+
+      <div class="time">
+          <%= match.created_at.strftime("%Y-%m-%d") %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,28 +1,82 @@
-.match-h1 {
-  font-size: 100px;
+.container-match {
+  margin: 80px;
+}
+.match-h1 h1 {
+  font-size: 5.5rem;
   text-align: center;
   font-weight: bolder;
-  margin: 0 auto;
+  //margin: 0 auto;
   position: relative;
-  bottom: 50px;
+  //bottom: 50px;
   animation: flicker 2s infinite alternate;
   color: rgb(252, 252, 252);
   font-family: 'Prompt', sans-serif;
   color: #64DFDF;
-  padding: 130px 200px 50px 200px;
+  padding: 100px;
 }
 
-.match-card {
+.match-h2 {
+  font-size: 60px;
+  text-align: center;
+  font-weight: bolder;
+  //margin: 0 auto;
+  //position: relative;
+  //bottom: 50px;
+  animation: flicker 2s infinite alternate;
+  color: rgb(252, 252, 252);
+  font-family: 'Prompt', sans-serif;
+  color: #64DFDF;
+  padding: 100px;
+}
+
+.container-card {
   border: 2px solid rgb(240, 201, 255);
   box-shadow: 2px 2px 10px rgba(240, 201, 255, 0.24);
   border-radius: 12px;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 60px;
-  margin: 30px 250px;
+  padding: 50px;
+  //margin: 100px;
   background-color: rgba(137, 43, 226, 0.288);
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
 }
 
+.container-card-now {
+  border: 2px solid rgb(240, 201, 255);
+  box-shadow: 2px 2px 10px rgba(240, 201, 255, 0.24);
+  border-radius: 12px;
+  padding: 50px;
+  //margin: 100px;
+  background-color: rgba(162, 91, 228, 0.267);
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+}
+.match-card {
+  //border: 2px solid rgb(240, 201, 255);
+  //box-shadow: 2px 2px 10px rgba(240, 201, 255, 0.24);
+  //border-radius: 12px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  //margin: 100px;
+  //background-color: rgba(137, 43, 226, 0.288);
+  //width: 600px;
+  //height: auto;
+  margin: 0 auto;
+}
+
+.no-match {
+  border: 2px solid #64DFDF;
+  box-shadow: 2px 2px 10px rgba(240, 201, 255, 0.24);
+  border-radius: 12px;
+  padding: 50px;
+  //margin: 100px;
+  background-color: rgba(240, 201, 255, 0.568);
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+}
 .match-avatar {
   //border: 3px solid #64dfcf ;
   border-radius: 50%;
@@ -39,4 +93,8 @@
   box-shadow: 2px 2px 10px #64dfcf;
   height: 230px;
   width: 230px;
-  }
+}
+
+.time {
+    color: azure;
+}
