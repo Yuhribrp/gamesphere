@@ -120,7 +120,6 @@ puts "------------- Seeding users completed -------------------"
 # 2.times do
 
 # 25.times do
-
 #   players << User.new(
 #     email: Faker::Internet.email,
 #     # password: Faker::Alphanumeric.alphanumeric(number: 10),
@@ -129,11 +128,7 @@ puts "------------- Seeding users completed -------------------"
 #     full_name: Faker::Name.unique.name,
 #     language: Faker::Nation.language,
 #     location: Faker::Nation.capital_city,
-
 #     age: rand(1..50)
-
-# #     age: rand(1..135)
-
 #   )
 #   players.last.save!
 #   puts "...added #{players.last.username}, #{players.last.full_name}"
