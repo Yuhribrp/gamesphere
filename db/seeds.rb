@@ -8,10 +8,10 @@
 
 # require 'cgi'
 
-Post.delete_all
-Community.delete_all
-Evaluation.destroy_all
-User.delete_all
+# Post.delete_all
+# Community.delete_all
+# Evaluation.destroy_all
+# User.delete_all
 
 # communities
 puts "---------------Seeding Communities Started---------------"
