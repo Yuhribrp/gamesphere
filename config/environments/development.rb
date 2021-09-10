@@ -62,5 +62,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
    # Show full error reports.
-  config.consider_all_requests_local = true
+  config.consider_all_requests_local = false
 end
