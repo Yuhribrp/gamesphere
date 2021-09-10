@@ -19,7 +19,7 @@
         <% @communities.each do |community| %>
           <div class="card-seed" style="background-image:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('<%=community.img_url%>')">
             <h3> <%= community.title %> </h3>
-              <%= link_to "Join", ("communities/#{community.id}/posts"), class: "a" %>
+              <%= link_to "enter", ("communities/#{community.id}/posts"), class: "a" %>
             <span></span>
             <span></span>
             <span></span>
