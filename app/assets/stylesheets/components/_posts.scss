@@ -190,9 +190,12 @@ textarea {
   // text-align: center;
   box-shadow: 0 0 10px whitesmoke;
   border-radius: 12px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
   
+  #post-avatar {
+  }
+
 
   h4 {
     position:absolute;
