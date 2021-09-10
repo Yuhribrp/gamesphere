@@ -13,4 +13,9 @@ class ApplicationController < ActionController::Base
   def title(text)
     content_for :title, text
   end
+
+  # app/controllers/application_controller.rb
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
 end
