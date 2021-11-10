@@ -21,19 +21,16 @@ class User < ApplicationRecord
       avatar.variant(resize: "150x150!").processed
     else
       "/default_avatar.jpg"
-    end  
+    end
   end
 
   private
 
   def add_default_avatar
     unless avatar.attached?
+      file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/image_spjcwq.jpg')
       avatar.attach(
-        io: File.open(
-          Rails.root.join(
-            'app', 'assets', 'images', 'default_avatar.jpg'
-          )
-        ), 
+        io: file,
         filename: 'default_avatar.jpg',
         content_type: 'image/jpg'
       )

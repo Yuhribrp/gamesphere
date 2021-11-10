@@ -10,12 +10,12 @@ class UsersController < ApplicationController
        redirect_to profile_path(@user)
     else
       render :edit
-    end  
+    end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:full_name, :location, :age, :photo)
+    params.require(:user).permit(:full_name, :location, :age, :photo, :language, :avatar)
   end
 end

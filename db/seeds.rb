@@ -22,10 +22,38 @@ Community.create!(
   title: "League of Legends",
   img_url: "http://localhost:3000/assets/mf.jpg"
 )
-# dota_2 = Community.create!(
-#   title: "DOTA 2",
-#   img_url:"http://localhost:3000/assets/ember.jpg"
-# )
+Community.create!(
+  title: "Dota 2",
+  img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245891/ember_jkx4ia.jpg"
+)
+
+Community.create!(
+  title: "GTA",
+  img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245955/GTA_jdzxje.jpg"
+)
+
+Community.create!(title: "Fortnite", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245894/fortnite3_vbjz4h.jpg")
+Community.create!(title: "Wow", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245909/wow4_dndirs.jpg")
+Community.create!(title: "Valorant", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245903/valorant_i4ftxm.jpg")
+Community.create!(title: "Cyberpunk", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245837/cyberpunk_nwj5kt.jpg")
+Community.create!(title: "Bioshock", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245847/bioshock_ahsqyo.jpg")
+Community.create!(title: "Far Cry", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245835/far_cry_usqk86.jpg")
+Community.create!(title: "Apex Legends", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245835/apexlegends_nhjcii.jpg")
+Community.create!(title: "Call of Duty", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245834/callofduty_i6mzgr.jpg")
+Community.create!(title: "Cs Go", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245834/csgo_dno6n7.jpg")
+Community.create!(title: "Hearthstone", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245839/hearthstone_ix18uk.jpg")
+Community.create!(title: "Pokémon", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245838/pokemon_cjiahb.jpg")
+Community.create!(title: "Ragnarok", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245832/ragnarok_d1pya6.jpg")
+Community.create!(title: "Runescape", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245833/runescape_ekkyyb.jpg")
+Community.create!(title: "Minecraft", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245838/minecraft_zgamvw.png")
+Community.create!(title: "The Sims", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245833/thesims_pkih9v.jpg")
+Community.create!(title: "Pac-Man", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245836/pacman_fq5nnc.jpg")
+Community.create!(title: "Fifa", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245834/fifa2021_w00onw.jpg")
+Community.create!(title: "Tekken", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245833/tekken_nyewxs.jpg")
+Community.create!(title: "Mortal Kombat", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245833/mortalkombat_beadna.jpg")
+Community.create!(title: "Street Fighter", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245833/streetfighter_sgpond.jpg")
+Community.create!(title: "The King of Fighters", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245832/thekinfoffighters_ljr7la.jpg")
+Community.create!(title: "Metroid", img_url: "https://res.cloudinary.com/yuhri/image/upload/v1631245832/metroid_vj6kas.jpg")
 # fortnite = Community.create!(
 #   title: "Fortnite",
 #   img_url: "http://localhost:3000/assets/fortnite3.jpg"
@@ -34,10 +62,7 @@ Community.create!(
 #   title: "Valorant",
 #   img_url: "http://localhost:3000/assets/valorant.jpg"
 # )
-# gta_v = Community.create!(
-#   title: "Grand Theft Auto V",
-#   img_url: "http://localhost:3000/assets/GTA.jpg"
-# )
+
 # wow = Community.create!(
 #   title: "World of Warcraft",
 #   img_url: "http://localhost:3000/assets/wow4.jpg"
@@ -107,9 +132,6 @@ puts "------------- Seeding users completed -------------------"
 #     location: Faker::Nation.capital_city,
 
 #     age: rand(1..50)
-
-#     age: rand(1..135)
-
 #   )
 #   players.last.save!
 #   puts "...added #{players.last.username}, #{players.last.full_name}"

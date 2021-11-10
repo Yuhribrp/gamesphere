@@ -9,13 +9,13 @@
       <div class="match-card">
         <div class="match-avatar">
           <%= link_to profile_path(@player_one) do %>
-            <%= cl_image_tag @player_one.photo.key , :class => "img-preview" %>
+            <%= cl_image_tag @player_one.avatar.key, :class => "img-preview"  %>
           <% end %>
           <%= current_user.username %>
         </div>
         <div class="match-avatar">
           <%= link_to profile_path(@player_two) do %>
-            <%= cl_image_tag @player_two.photo.key , :class => "img-preview", crop: :fill %>
+            <%= cl_image_tag @player_two.avatar.key, :class => "img-preview", crop: :fill %>
           <% end %>
           <%= @player_two.username %>
         </div>
@@ -39,14 +39,14 @@
       <div class="match-card">
         <div class="match-avatar">
           <%= link_to profile_path(@player_one) do %>
-            <%= cl_image_tag @player_one.photo.key , :class => "img-preview" %>
+            <%= cl_image_tag @player_one.avatar.key , :class => "img-preview" %>
           <% end %>
           <%= match.user_one.username %>
         </div>
 
         <div class="match-avatar">
           <%= link_to profile_path(@player_two) do %>
-            <%= cl_image_tag @player_two.photo.key , :class => "img-preview", crop: :fill %>
+            <%= cl_image_tag @player_two.avatar.key , :class => "img-preview", crop: :fill %>
           <% end %>
           <%= match.user_two.username %>
         </div>
