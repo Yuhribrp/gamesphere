@@ -1,0 +1,10 @@
+2023-03-16 15:12:53.764 -03 [1380] LOG:  starting PostgreSQL 14.7 (Homebrew) on aarch64-apple-darwin22.1.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.202), 64-bit
+2023-03-16 15:12:53.765 -03 [1380] LOG:  listening on IPv6 address "::1", port 5432
+2023-03-16 15:12:53.765 -03 [1380] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-03-16 15:12:53.765 -03 [1380] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-03-16 15:12:53.769 -03 [1382] LOG:  database system was shut down at 2022-08-22 20:00:47 -03
+2023-03-16 15:12:53.773 -03 [1380] LOG:  database system is ready to accept connections
+2023-03-16 15:16:37.631 -03 [1560] ERROR:  database "gamesphere_development" already exists
+2023-03-16 15:16:37.631 -03 [1560] STATEMENT:  CREATE DATABASE "gamesphere_development" ENCODING = 'unicode'
+2023-03-16 15:16:37.635 -03 [1562] ERROR:  database "gamesphere_test" already exists
+2023-03-16 15:16:37.635 -03 [1562] STATEMENT:  CREATE DATABASE "gamesphere_test" ENCODING = 'unicode'
