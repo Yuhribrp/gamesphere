@@ -83,33 +83,33 @@ puts "------------- Seeding communities completed -------------------"
 
 puts "------------- Seeding users -------------------"
 
-# require "open-uri"
+require "open-uri"
 
-# file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/Avatar-6-1_a3jpsm.jpg')
-# player_one = User.new(
-#   email: "player_one@icloud.com",
-#   password: "abc123",
-#   username: "parzival",
-#   full_name: "Wade Watts",
-#   language: "english",
-#   location: "Ohio",
-#   age: 27
-# )
-# player_one.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
-# player_one.save
+file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/Avatar-6-1_a3jpsm.jpg')
+player_one = User.new(
+  email: "player_one@icloud.com",
+  password: "abc123",
+  username: "parzival",
+  full_name: "Wade Watts",
+  language: "english",
+  location: "Ohio",
+  age: 27
+)
+player_one.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+player_one.save
 
-# file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/image_spjcwq.jpg')
-# player_two = User.new(
-#   email: "player_two@icloud.com",
-#   password: "abc123",
-#   username: "juquinha",
-#   full_name: "Pinkman",
-#   language: "english",
-#   location: "Ohio",
-#   age: 27
-# )
-# player_two.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
-# player_two.save
+file = URI.open('https://res.cloudinary.com/yuhri/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1630959256/image_spjcwq.jpg')
+player_two = User.new(
+  email: "player_two@icloud.com",
+  password: "abc123",
+  username: "juquinha",
+  full_name: "Pinkman",
+  language: "english",
+  location: "Ohio",
+  age: 27
+)
+player_two.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+player_two.save
 
 puts "------------- Seeding users completed -------------------"
 
